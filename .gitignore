@@ -3,6 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
+# Lock file (generated per-platform, causes Hostinger GLIBC mismatch)
+package-lock.json
+
 # Large media & PDF catalogs
 assets/
 *.pdf
