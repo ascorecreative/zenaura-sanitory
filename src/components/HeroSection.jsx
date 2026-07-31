@@ -60,9 +60,9 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen pt-36 pb-20 flex items-center justify-center overflow-hidden bg-[#FBFBFC] hero-full-mesh">
+    <section id="hero" className="relative min-h-screen pt-36 pb-20 flex items-center justify-center overflow-hidden bg-[#FBFBFC] hero-full-mesh font-sans">
       
-      {/* Full-Bleed Multi-Color Dynamic Floating Orbs (Forest Green, Champagne Gold, AI Violet, Soft Cyan, Mineral Sage) */}
+      {/* Dynamic Multi-Color Background Orbs */}
       <div 
         className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-gradient-to-tr from-[#203A30]/20 via-[#C8A97E]/20 to-[#8B5CF6]/15 blur-3xl opacity-80 pointer-events-none rounded-full" 
         style={{ animation: 'spin 22s linear infinite' }} 
@@ -75,27 +75,25 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
         className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-gradient-to-tl from-[#C8A97E]/25 via-[#8B5CF6]/15 to-[#467970]/20 rounded-full blur-3xl pointer-events-none" 
         style={{ animation: 'pulse 14s ease-in-out infinite' }} 
       />
-      <div 
-        className="absolute top-1/2 right-1/3 w-[450px] h-[450px] bg-gradient-to-r from-[#467970]/20 to-[#C8A97E]/20 rounded-full blur-3xl pointer-events-none" 
-        style={{ animation: 'pulse 12s ease-in-out infinite' }} 
-      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Headline & Value Proposition */}
-          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#203A30]/20 text-xs font-bold text-[#203A30] shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#C8A97E]" />
-              <span className="tracking-[0.06em] uppercase">Official BAGNODESIGN / SANIPEX GROUP MEA 2026</span>
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+            
+            {/* Top Badge: Fixed Mobile Layout Alignment */}
+            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#203A30]/20 text-[10px] sm:text-xs font-bold text-[#203A30] shadow-sm max-w-full text-center leading-tight">
+              <Sparkles className="w-3.5 h-3.5 text-[#C8A97E] shrink-0" />
+              <span>OFFICIAL BAGNODESIGN / SANIPEX GROUP MEA 2026</span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="font-serif text-4xl sm:text-6xl xl:text-7xl font-light text-[#203A30] leading-[1.1] tracking-tight">
+              <h1 className="font-serif text-3xl sm:text-6xl xl:text-7xl font-light text-[#203A30] leading-[1.15] sm:leading-[1.1] tracking-tight">
                 Architectural <br />
                 <span className="font-normal italic text-[#203A30] teal-shimmer">Elegance</span> for Refined Spaces.
               </h1>
-              <p className="text-base sm:text-lg text-[#2D3748] font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-sm sm:text-lg text-[#2D3748] font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Curated Sanitary Ware, Tiles, Spa Systems & Luxury Hardware from the official MEA 2026 Portfolio. Tailored for penthouses, 5-star hospitality, and architectural landmarks across the UAE & GCC.
               </p>
             </div>
@@ -155,7 +153,7 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
             </div>
           </div>
 
-          {/* Right Column: Interactive Hero Slider */}
+          {/* Right Column: Hero Slider */}
           <div className="lg:col-span-5 relative flex justify-center">
             
             {/* Multi-Color Dynamic Glowing Aura behind the slider */}
@@ -165,7 +163,7 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
             />
             
             {/* Main Luxury Image Slider Card */}
-            <div className="relative bg-white/95 backdrop-blur-xl rounded-3xl p-3 border border-[#203A30]/20 shadow-2xl overflow-hidden max-w-md w-full group z-10">
+            <div className="relative bg-white/95 backdrop-blur-xl rounded-3xl p-2.5 sm:p-3 border border-[#203A30]/20 shadow-2xl overflow-hidden max-w-md w-full group z-10">
               
               {/* Image Container */}
               <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-[#F4F6F5]">
@@ -182,16 +180,16 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
 
-                    {/* Dynamic Floating Caption Overlay Pill */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl p-3.5 border border-[#203A30]/20 shadow-lg flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
-                        <div>
-                          <p className="text-xs font-bold text-[#203A30] truncate max-w-[190px] sm:max-w-[210px]">{slide.title}</p>
-                          <p className="text-[10px] font-semibold text-[#2D3748] truncate max-w-[190px] sm:max-w-[210px]">{slide.subtitle}</p>
+                    {/* Fixed Mobile Floating Caption Overlay Pill (No Text Overflows!) */}
+                    <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3.5 border border-[#203A30]/20 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2">
+                      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 w-full">
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping shrink-0" />
+                        <div className="min-w-0 flex-1">
+                          <p className="text-[11px] sm:text-xs font-bold text-[#203A30] truncate">{slide.title}</p>
+                          <p className="text-[9px] sm:text-[10px] font-semibold text-[#2D3748] truncate">{slide.subtitle}</p>
                         </div>
                       </div>
-                      <span className="text-[9px] font-bold tracking-widest text-white uppercase bg-[#203A30] px-2.5 py-1 rounded-md shrink-0">
+                      <span className="text-[8px] sm:text-[9px] font-bold tracking-wider text-white uppercase bg-[#203A30] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md shrink-0 self-start sm:self-auto">
                         {slide.tag}
                       </span>
                     </div>
@@ -201,7 +199,7 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
                 {/* Slider Manual Prev/Next Buttons */}
                 <button
                   onClick={handlePrev}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                  className="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
                   aria-label="Previous Slide"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -209,7 +207,7 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
 
                 <button
                   onClick={handleNext}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                  className="absolute right-2.5 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
                   aria-label="Next Slide"
                 >
                   <ChevronRight className="w-4 h-4" />

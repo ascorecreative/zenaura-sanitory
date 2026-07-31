@@ -3,18 +3,18 @@ import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 
 export default function ShowroomContact() {
   return (
-    <section id="contact" className="py-24 bg-[#FBFBFC] relative font-sans">
+    <section id="contact" className="py-16 sm:py-24 bg-[#FBFBFC] relative font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#203A30] px-3.5 py-1 rounded-full bg-[#E8EFEB] border border-[#203A30]/20">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 mb-12 sm:mb-16">
+          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#203A30] px-3.5 py-1 rounded-full bg-[#E8EFEB] border border-[#203A30]/20 inline-block">
             UAE Showroom & Corporate Office
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-[#203A30] font-light">
             Ajman Executive Location
           </h2>
-          <p className="text-sm sm:text-base text-[#2D3748] font-normal leading-relaxed">
+          <p className="text-xs sm:text-base text-[#2D3748] font-normal leading-relaxed">
             Visit our architectural showroom in Amber Gem Tower, Ajman to experience tactile finish samples and consult with technical specification specialists.
           </p>
         </div>
@@ -23,22 +23,22 @@ export default function ShowroomContact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Column: Contact Cards with Official Zenaura Logo */}
-          <div className="lg:col-span-5 bg-white rounded-3xl p-8 border border-[#203A30]/20 shadow-xl flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
+          <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-[#203A30]/20 shadow-xl flex flex-col justify-between space-y-6 sm:space-y-8">
+            <div className="space-y-5 sm:space-y-6">
               
               {/* Zenaura Official Logo Display */}
               <div className="flex items-center gap-3 pb-2 border-b border-[#203A30]/10">
                 <img 
                   src="/logo.svg" 
                   alt="ZS ZENAURA SANITARY" 
-                  className="h-12 w-auto object-contain" 
+                  className="h-10 sm:h-12 w-auto object-contain" 
                 />
               </div>
 
               {/* Address Item */}
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
-                <div className="w-10 h-10 rounded-xl bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15">
-                  <MapPin className="w-5 h-5 text-[#203A30]" />
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
+                <div className="w-9 h-9 rounded-xl bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15 mt-0.5">
+                  <MapPin className="w-4 h-4 text-[#203A30]" />
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Showroom & Corporate Office</h4>
@@ -49,9 +49,9 @@ export default function ShowroomContact() {
               </div>
 
               {/* Phone & WhatsApp */}
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-600/20">
-                  <Phone className="w-5 h-5" />
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
+                <div className="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-600/20 mt-0.5">
+                  <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Direct Phone & WhatsApp</h4>
@@ -63,9 +63,9 @@ export default function ShowroomContact() {
               </div>
 
               {/* Email */}
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
-                <div className="w-10 h-10 rounded-xl bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15">
-                  <Mail className="w-5 h-5 text-[#203A30]" />
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#F4F6F5] border border-[#203A30]/15">
+                <div className="w-9 h-9 rounded-xl bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15 mt-0.5">
+                  <Mail className="w-4 h-4 text-[#203A30]" />
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Official Email Inquiry</h4>
@@ -76,15 +76,15 @@ export default function ShowroomContact() {
               </div>
             </div>
 
-            {/* Quick Action Button: Matching Brand Theme (#203A30 Deep Forest Green, White Text, Gold Icon) */}
+            {/* Quick Action Button: Perfectly Centered Mobile Alignment */}
             <div className="pt-4 border-t border-[#203A30]/10">
               <a
                 href="https://maps.google.com/?q=Amber+Gem+Tower+Ajman"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 rounded-full bg-[#203A30] text-white hover:bg-[#2D4F42] transition-colors duration-300 shadow-md text-xs font-bold uppercase tracking-[0.06em] flex items-center justify-center gap-2.5 group"
+                className="w-full py-3.5 px-4 rounded-full bg-[#203A30] text-white hover:bg-[#2D4F42] transition-colors duration-300 shadow-md text-[11px] sm:text-xs font-bold uppercase tracking-[0.06em] flex items-center justify-center gap-2.5 text-center leading-tight group"
               >
-                <Navigation className="w-4 h-4 text-[#C8A97E] group-hover:scale-110 transition-transform" />
+                <Navigation className="w-4 h-4 text-[#C8A97E] shrink-0 group-hover:scale-110 transition-transform" />
                 <span>Get Driving Directions to Amber Gem Tower</span>
               </a>
             </div>
@@ -92,7 +92,7 @@ export default function ShowroomContact() {
           </div>
 
           {/* Right Column: Custom Map Embed */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-3 border border-[#203A30]/20 shadow-xl flex flex-col min-h-[420px] relative overflow-hidden">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-3 border border-[#203A30]/20 shadow-xl flex flex-col min-h-[360px] sm:min-h-[420px] relative overflow-hidden">
             <div className="w-full h-full rounded-2xl overflow-hidden relative border border-[#203A30]/10 flex-1">
               <iframe
                 title="Zenaura Amber Gem Tower Ajman Location Map"
@@ -104,7 +104,7 @@ export default function ShowroomContact() {
               />
 
               {/* Floating Overlay Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl border border-[#203A30]/20 shadow-xl max-w-xs space-y-1">
+              <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/95 backdrop-blur-md px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl border border-[#203A30]/20 shadow-xl max-w-xs space-y-1">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
                   <span className="text-xs font-bold text-[#203A30]">26th Floor Executive Suite</span>

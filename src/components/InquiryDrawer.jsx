@@ -54,11 +54,11 @@ Please reach out with catalog specs and pricing.`;
   return (
     <>
       {/* Inline Section Container */}
-      <section id="inquiry" className="py-24 bg-[#F4F6F5]/60 relative font-sans">
+      <section id="inquiry" className="py-16 sm:py-24 bg-[#F4F6F5]/60 relative font-sans">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
           
-          {/* Frosted Glass Form Card with Brand Green Styling */}
-          <div className="bg-[#203A30]/95 backdrop-blur-2xl rounded-3xl p-8 sm:p-12 border border-[#C8A97E]/30 shadow-2xl text-white space-y-8">
+          {/* Frosted Glass Form Card */}
+          <div className="bg-[#203A30]/95 backdrop-blur-2xl rounded-3xl p-6 sm:p-12 border border-[#C8A97E]/30 shadow-2xl text-white space-y-6 sm:space-y-8">
             
             <div className="text-center space-y-3 max-w-2xl mx-auto">
               <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#C8A97E] px-3.5 py-1 rounded-full bg-white/10 border border-white/20 inline-flex items-center gap-1.5">
@@ -73,8 +73,8 @@ Please reach out with catalog specs and pricing.`;
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                 
                 {/* Full Name */}
                 <div className="space-y-2">
@@ -155,17 +155,17 @@ Please reach out with catalog specs and pricing.`;
                 />
               </div>
 
-              {/* Form Submit Button */}
+              {/* Form Submit Button: Perfectly Centered Mobile Alignment */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-full bg-[#C8A97E] text-[#203A30] hover:bg-[#d8b88d] transition-all duration-300 font-bold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 group"
+                className="w-full py-3.5 px-4 rounded-full bg-[#C8A97E] text-[#203A30] hover:bg-[#d8b88d] transition-all duration-300 font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 text-center leading-tight group"
               >
-                <Send className="w-4 h-4 text-[#203A30] group-hover:translate-x-1 transition-transform" />
+                <Send className="w-4 h-4 text-[#203A30] shrink-0 group-hover:translate-x-0.5 transition-transform" />
                 <span>Send Form to WhatsApp (+971 54 783 4673)</span>
               </button>
             </form>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 pt-4 border-t border-white/15 text-xs text-white/80 font-medium">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-4 border-t border-white/15 text-xs text-white/80 font-medium">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#C8A97E]" />
                 Direct Technical Team Response
@@ -180,7 +180,7 @@ Please reach out with catalog specs and pricing.`;
         </div>
       </section>
 
-      {/* Slide-over Drawer Modal (Dark Forest Green Frosted Glass with White/Gold High Contrast Text) */}
+      {/* Slide-over Drawer Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex justify-end font-sans">
           {/* Frosted Backdrop Overlay */}
@@ -267,9 +267,9 @@ Please reach out with catalog specs and pricing.`;
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-full bg-[#C8A97E] text-[#203A30] font-bold text-xs uppercase tracking-wider hover:bg-[#d8b88d] transition-colors shadow-md flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-4 rounded-full bg-[#C8A97E] text-[#203A30] font-bold text-[11px] sm:text-xs uppercase tracking-wider hover:bg-[#d8b88d] transition-colors shadow-md flex items-center justify-center gap-2 text-center leading-tight"
                   >
-                    <Send className="w-4 h-4 text-[#203A30]" />
+                    <Send className="w-4 h-4 text-[#203A30] shrink-0" />
                     <span>Launch WhatsApp Chat</span>
                   </button>
                 </form>
