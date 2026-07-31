@@ -44,8 +44,8 @@ export default function MobileBottomDock({ onOpenInquiry }) {
         isVisible ? 'translate-y-0' : 'translate-y-32 pointer-events-none'
       }`}
     >
-      {/* Translucent Frosted Glass Dock (Matching Header Transparency) */}
-      <div className="bg-[#203A30]/75 backdrop-blur-2xl border border-white/20 rounded-[28px] shadow-2xl px-2 py-2 grid grid-cols-5 items-center text-white font-sans">
+      {/* Translucent Frosted Glass Dock Container */}
+      <div className="bg-[#203A30]/75 backdrop-blur-2xl border border-white/20 rounded-[28px] shadow-2xl px-2 py-2.5 grid grid-cols-5 items-center text-white font-sans overflow-visible relative">
         
         {/* Nav 1: Home */}
         <a
@@ -71,15 +71,15 @@ export default function MobileBottomDock({ onOpenInquiry }) {
           <span className="text-[9px] sm:text-[10px] font-bold tracking-wider uppercase truncate max-w-full">Collections</span>
         </a>
 
-        {/* Center Raised Action Button (Glowing Translucent WhatsApp/Inquiry Trigger) */}
-        <div className="flex justify-center items-center -mt-7 relative shrink-0">
-          <div className="absolute -inset-1 bg-[#C8A97E]/40 rounded-full blur-md animate-pulse" />
+        {/* Center Big Raised Action Button (Prominent Glowing WhatsApp/Inquiry Trigger) */}
+        <div className="flex justify-center items-center relative z-20 shrink-0">
+          <div className="absolute -top-7 -inset-1 bg-[#C8A97E]/50 rounded-full blur-md animate-pulse" />
           <button
             onClick={onOpenInquiry}
-            className="relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#203A30]/90 backdrop-blur-xl border-2 border-[#C8A97E] text-[#C8A97E] shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300"
+            className="relative -mt-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#203A30] border-2 border-[#C8A97E] text-[#C8A97E] shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-300"
             aria-label="Instant WhatsApp Quote"
           >
-            <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 fill-[#C8A97E]/20" />
+            <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7 fill-[#C8A97E]/20" />
           </button>
         </div>
 
