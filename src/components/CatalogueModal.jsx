@@ -12,13 +12,16 @@ export default function CatalogueModal({ isOpen, onClose }) {
     e.preventDefault();
     setDownloaded(true);
 
-    // Trigger PDF download from assets folder
-    const link = document.createElement('a');
-    link.href = '/assets/MEA 2026.pdf';
-    link.download = 'Zenaura_MEA_2026_BAGNODESIGN_Catalog.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Send pre-filled WhatsApp request for high-res PDF catalog
+    const msg = `Hello Zenaura Sanitary (Ajman Showroom),
+I have requested the official MEA 2026 BAGNODESIGN Catalogue PDF:
+👤 Name: ${name || 'Valued Client'}
+✉️ Email: ${email || 'N/A'}
+
+Please send the direct high-res download link.`;
+
+    const encoded = encodeURIComponent(msg);
+    window.open(`https://wa.me/971547834673?text=${encoded}`, '_blank');
   };
 
   return (
@@ -29,7 +32,7 @@ export default function CatalogueModal({ isOpen, onClose }) {
         className="fixed inset-0 bg-[#0F1816]/75 backdrop-blur-md transition-opacity"
       />
 
-      {/* Dark Forest Green Frosted Glass Modal Card with White & Gold High Contrast Text */}
+      {/* Dark Forest Green Frosted Glass Modal Card */}
       <div className="relative bg-[#203A30]/95 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-[#C8A97E]/30 text-white z-10 space-y-6 animate-in zoom-in-95 duration-200">
         
         {/* Header */}
@@ -56,9 +59,9 @@ export default function CatalogueModal({ isOpen, onClose }) {
             <div className="w-16 h-16 rounded-full bg-[#C8A97E]/20 text-[#C8A97E] flex items-center justify-center mx-auto shadow-inner border border-[#C8A97E]/30">
               <CheckCircle className="w-8 h-8" />
             </div>
-            <h4 className="font-serif text-2xl text-white font-bold">Catalogue Download Started!</h4>
+            <h4 className="font-serif text-2xl text-white font-bold">Catalogue Request Sent!</h4>
             <p className="text-xs text-white/80 max-w-sm mx-auto font-medium leading-relaxed">
-              Your copy of the official MEA 2026 BAGNODESIGN / SANIPEX GROUP catalog is downloading. Our team at Amber Gem Tower, Ajman is ready for any BOQ questions.
+              Your request for the official MEA 2026 BAGNODESIGN / SANIPEX GROUP catalog has been sent to our technical desk. Our team at Amber Gem Tower, Ajman will assist you immediately.
             </p>
             <button
               onClick={onClose}

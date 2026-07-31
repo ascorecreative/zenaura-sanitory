@@ -3,6 +3,10 @@ node_modules/
 .pnp
 .pnp.js
 
+# Large media & PDF catalogs
+assets/
+*.pdf
+
 # Production output
 dist/
 build/
