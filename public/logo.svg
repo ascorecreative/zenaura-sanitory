@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <g fill="#203A30">
+    <!-- Crescent Arc & ZS Monogram -->
+    <path d="M 85,30 C 35,50 20,110 50,150 C 75,185 130,185 155,155 C 162,146 164,136 160,128 C 156,120 146,122 138,130 C 120,150 75,150 58,125 C 38,95 52,52 92,40 C 102,37 105,25 85,30 Z" opacity="0.9"/>
+    <!-- Stylized Z -->
+    <text x="52" y="130" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="105" font-weight="500" font-style="italic" letter-spacing="-4">Z</text>
+    <!-- Stylized S -->
+    <text x="95" y="152" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="100" font-weight="400" font-style="italic" letter-spacing="-2">S</text>
+    
+    <!-- ZENAURA Title Text -->
+    <text x="210" y="105" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="64" font-weight="600" letter-spacing="8">ZENAURA</text>
+    <!-- SANITARY Subtitle Text -->
+    <text x="212" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="600" letter-spacing="11">SANITARY</text>
+  </g>
+</svg>
