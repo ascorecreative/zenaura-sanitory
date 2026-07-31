@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <rect width="100" height="100" rx="24" fill="#0F1816"/>
-  <circle cx="50" cy="50" r="42" fill="none" stroke="#467970" stroke-width="2" opacity="0.6"/>
-  <text x="50" y="64" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="bold" font-style="italic" fill="#467970" text-anchor="middle">ZS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <g fill="#203A30">
+    <!-- Outer Crescent Arc Stroke -->
+    <path d="M 115,20 C 50,45 25,120 65,168 C 98,208 170,208 200,168 C 208,157 210,144 205,134 C 200,124 186,126 176,136 C 152,160 96,160 74,130 C 48,94 66,44 118,30 C 130,26 134,12 115,20 Z" opacity="0.95"/>
+    <!-- Stylized Z -->
+    <text x="62" y="146" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="130" font-weight="600" font-style="italic" letter-spacing="-5">Z</text>
+    <!-- Stylized S -->
+    <text x="115" y="170" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="125" font-weight="400" font-style="italic" letter-spacing="-3">S</text>
+  </g>
 </svg>

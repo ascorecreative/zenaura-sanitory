@@ -10,6 +10,7 @@ import ShowroomContact from './components/ShowroomContact';
 import Footer from './components/Footer';
 import CatalogueModal from './components/CatalogueModal';
 import ProductDetailModal from './components/ProductDetailModal';
+import MobileBottomDock from './components/MobileBottomDock';
 
 export default function App() {
   const [catalogueModalOpen, setCatalogueModalOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zenaura-base text-zenaura-obsidian font-sans relative selection:bg-zenaura-gold selection:text-zenaura-obsidian">
+    <div className="min-h-screen bg-[#FBFBFC] text-[#203A30] font-sans relative selection:bg-[#C8A97E] selection:text-[#203A30]">
       
       {/* Header & Navigation */}
       <HeaderNav 
@@ -69,6 +70,11 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Mobile Floating Bottom Dock (Hides on Scroll UP, Shows on Scroll DOWN or IDLE) */}
+      <MobileBottomDock 
+        onOpenInquiry={() => handleOpenInquiryDrawer()} 
+      />
 
       {/* Modals */}
       <CatalogueModal 
