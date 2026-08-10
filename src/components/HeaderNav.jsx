@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Download, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, Sparkles, Download, Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,13 +13,12 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 1. Shortened Navigation Labels (Single Line, No Collisions)
   const navLinks = [
     { name: 'HOME', href: '#hero' },
     { name: 'COLLECTIONS', href: '#collections' },
     { name: 'CATEGORIES', href: '#categories' },
+    { name: 'BRANDS', href: '#brands' },
     { name: 'FINISHES', href: '#studio' },
-    { name: 'PROJECTS', href: '#projects' },
     { name: 'INQUIRY', href: '#inquiry' },
   ];
 
@@ -32,25 +31,25 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
           <div className="flex items-center gap-6">
             <a 
               href="tel:+971547834673" 
-              className="flex items-center gap-1.5 font-medium hover:text-[#C8A97E] transition-colors duration-200"
+              className="flex items-center gap-1.5 font-medium hover:text-[#D4AF37] transition-colors duration-200"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C8A97E]" />
+              <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>+971 54 783 4673</span>
             </a>
             <span className="text-[#203A30]/30">|</span>
             <a 
               href="mailto:zenauratrading@outlook.com" 
-              className="flex items-center gap-1.5 font-medium hover:text-[#C8A97E] transition-colors duration-200"
+              className="flex items-center gap-1.5 font-medium hover:text-[#D4AF37] transition-colors duration-200"
             >
-              <Mail className="w-3.5 h-3.5 text-[#C8A97E]" />
+              <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>zenauratrading@outlook.com</span>
             </a>
           </div>
 
-          {/* Right: Address */}
+          {/* Right: Tagline */}
           <div className="hidden md:flex items-center gap-1.5 text-[#203A30]/80 font-medium">
-            <MapPin className="w-3.5 h-3.5 text-[#C8A97E]" />
-            <span>26th Floor, Amber Gem Tower, Ajman, UAE</span>
+            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+            <span>Sanitary Ware • Tiles • Architectural Solutions</span>
           </div>
         </div>
       </div>
@@ -76,20 +75,20 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
             </a>
           </div>
 
-          {/* Desktop Navigation Links (Single Line, Gap 1.75rem, No Wrap) */}
+          {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-7 flex-nowrap mr-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="whitespace-nowrap text-[0.8125rem] font-semibold tracking-[0.06em] uppercase text-[#203A30] hover:text-[#C8A97E] transition-all duration-300 relative py-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#C8A97E] hover:after:w-full after:transition-all after:duration-300"
+                className="whitespace-nowrap text-[0.8125rem] font-semibold tracking-[0.06em] uppercase text-[#203A30] hover:text-[#D4AF37] transition-all duration-300 relative py-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          {/* Right CTA Buttons (High Contrast & Minimum 2rem Gap from Nav) */}
+          {/* Right CTA Buttons */}
           <div className="hidden sm:flex items-center gap-3.5 flex-shrink-0">
             {/* Outline Button: Request Catalogue */}
             <button
@@ -106,14 +105,14 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
               className="whitespace-nowrap text-[12px] font-bold tracking-wider uppercase px-6 py-2.5 rounded-full bg-[#203A30] text-white hover:bg-[#2D4F42] transition-colors duration-300 shadow-md flex items-center gap-2"
             >
               <span className="text-white font-bold">Instant Quote</span>
-              <ArrowUpRight className="w-4 h-4 text-[#C8A97E]" />
+              <ArrowUpRight className="w-4 h-4 text-[#D4AF37]" />
             </button>
           </div>
 
           {/* Mobile Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#203A30] hover:text-[#C8A97E] transition-colors"
+            className="lg:hidden p-2 text-[#203A30] hover:text-[#D4AF37] transition-colors"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -129,7 +128,7 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-[13px] font-semibold tracking-[0.06em] uppercase text-[#203A30] hover:text-[#C8A97E] py-2 border-b border-[#F4F6F5]"
+                  className="text-[13px] font-semibold tracking-[0.06em] uppercase text-[#203A30] hover:text-[#D4AF37] py-2 border-b border-[#F4F6F5]"
                 >
                   {link.name}
                 </a>
@@ -148,7 +147,7 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
                 className="w-full flex items-center justify-center gap-2 text-[12px] font-bold uppercase tracking-wider px-5 py-3 rounded-full bg-[#203A30] text-white"
               >
                 <span>Instant WhatsApp Quote</span>
-                <ArrowUpRight className="w-4 h-4 text-[#C8A97E]" />
+                <ArrowUpRight className="w-4 h-4 text-[#D4AF37]" />
               </button>
             </div>
           </div>

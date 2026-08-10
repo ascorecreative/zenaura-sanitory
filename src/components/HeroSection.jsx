@@ -1,238 +1,248 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Award, Sparkles, MessageSquare, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Award, Sparkles, MessageSquare, ArrowRight, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
 export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
-  const heroSlides = [
+  const slides = [
     {
-      image: '/images/hero_bathtub.png',
-      title: 'Bagnoquartz Freestanding Soaking Tub',
-      subtitle: 'PVD Brushed Gold Floor-Mounted Mixer',
-      tag: 'MEA 2026 BATHING'
+      id: 1,
+      image: '/images/sanipex_slides/slide1_ginza.webp',
+      tag: 'BAGNODESIGN • JAPANESE BOUTIQUE ZEN',
+      title: 'The Ginza & Ginza Junior Series',
+      subtitle: 'Minimalist Japanese aesthetics, Armour matte coatings & organic ceramic forms.',
+      ctaText: 'Explore Bathroom Collections',
+      categoryLink: '#categories'
     },
     {
-      image: '/images/carlyle_collection.png',
-      title: 'Carlyle Scalloped Hotel Vanity',
-      subtitle: 'Spanish Alabaster Wall Sconce Lighting',
-      tag: '5-STAR HOSPITALITY'
+      id: 2,
+      image: '/images/sanipex_slides/slide2_outdoor_kitchen.webp',
+      tag: 'OUTDOOR LIVING • AL FRESCO KITCHEN',
+      title: 'Luxury Outdoor Kitchens & Dining',
+      subtitle: 'Stainless steel sinks, built-in grills & weatherproof dining modules.',
+      ctaText: 'Discover Outdoor Living',
+      categoryLink: '#categories'
     },
     {
-      image: '/images/ginza_collection.png',
-      title: 'Ginza Japandi Zen Washbasin',
-      subtitle: 'Armour Baby Pink & Misty Grey Finish',
-      tag: 'JAPANDI MINIMALISM'
+      id: 3,
+      image: '/images/sanipex_slides/slide3_pergola.webp',
+      tag: 'ARCHITECTURAL OUTDOOR • PERGOLAS',
+      title: 'Bioclimatic Pergolas & Poolbeds',
+      subtitle: 'Motorized louvers, integrated LED lighting & poolside daybeds.',
+      ctaText: 'View Outdoor Solutions',
+      categoryLink: '#categories'
     },
     {
-      image: '/images/sestriere_collection.png',
-      title: 'Sestriere Jewellery Brassware',
-      subtitle: 'Italian Calacatta Viola Marble Handles',
-      tag: 'HAUTE CRAFTSMANSHIP'
+      id: 4,
+      image: '/images/sanipex_slides/slide4_slabs.webp',
+      tag: 'TILES & SLABS • LARGE FORMAT',
+      title: 'Architectural Porcelain Slabs',
+      subtitle: '120x280cm bookmatched Calacatta marble & natural stone slabs.',
+      ctaText: 'Explore Porcelain Slabs',
+      categoryLink: '#categories'
     },
     {
-      image: '/images/fonteyn_collection.png',
-      title: 'Fonteyn Terrazzo Vanity Console',
-      subtitle: 'Transitional 1940s Mid-Century Curves',
-      tag: 'TRANSITIONAL LUXURY'
+      id: 5,
+      image: '/images/sanipex_slides/slide5_hardware.webp',
+      tag: 'ARCHITECTURAL HARDWARE • PVD FINISHES',
+      title: 'Precision PVD Handles & Fittings',
+      subtitle: 'PVD Gold, Oyster, Santiago & Brushed Nickel architectural hardware.',
+      ctaText: 'View Hardware Range',
+      categoryLink: '#studio'
     },
     {
-      image: '/images/studio316_collection.png',
-      title: 'Studio 316 Marine Outdoor Shower',
-      subtitle: 'AISI 316L Salt-Resistant Stainless Steel',
-      tag: 'OUTSIDE RESORT SPA'
+      id: 6,
+      image: '/images/sanipex_slides/slide6_lighting.webp',
+      tag: 'LUXURY LIGHTING • SANAURA & HEATHFIELD',
+      title: 'Architectural & Ambient Lighting',
+      subtitle: 'Spanish alabaster wall sconces, brass pendants & anti-fog LED mirrors.',
+      ctaText: 'Inquire Lighting & Mirrors',
+      categoryLink: '#categories'
     }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  // Auto-play slider interval (4.5s)
+  // Auto-play interval (5s)
   useEffect(() => {
+    if (!isPlaying) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 4500);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(timer);
-  }, [heroSlides.length]);
+  }, [isPlaying, slides.length]);
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   return (
-    <section id="hero" className="relative min-h-screen pt-36 pb-20 flex items-center justify-center overflow-hidden bg-[#FBFBFC] hero-full-mesh font-sans">
+    <section id="hero" className="relative pt-28 bg-[#0D0E12] text-white overflow-hidden font-sans">
       
-      {/* Dynamic Multi-Color Background Orbs */}
-      <div 
-        className="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-gradient-to-tr from-[#203A30]/20 via-[#C8A97E]/20 to-[#8B5CF6]/15 blur-3xl opacity-80 pointer-events-none rounded-full" 
-        style={{ animation: 'spin 22s linear infinite' }} 
-      />
-      <div 
-        className="absolute top-1/4 left-10 w-[550px] h-[550px] bg-gradient-to-br from-[#06B6D4]/20 to-[#203A30]/20 rounded-full blur-3xl pointer-events-none" 
-        style={{ animation: 'pulse 10s ease-in-out infinite' }} 
-      />
-      <div 
-        className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-gradient-to-tl from-[#C8A97E]/25 via-[#8B5CF6]/15 to-[#467970]/20 rounded-full blur-3xl pointer-events-none" 
-        style={{ animation: 'pulse 14s ease-in-out infinite' }} 
-      />
+      {/* Main Full-Width Sanipex-Style Hero Banner Slider */}
+      <div className="relative w-full h-[78vh] sm:h-[84vh] min-h-[560px] overflow-hidden group">
+        
+        {/* Slides Stack */}
+        {slides.map((slide, index) => {
+          const isActive = index === currentSlide;
+          return (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            >
+              {/* Slide Background Image with Smooth Parallax Scale Effect */}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className={`w-full h-full object-cover transition-transform duration-[7000ms] ease-out ${
+                  isActive ? 'scale-105' : 'scale-100'
+                }`}
+              />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Headline & Value Proposition */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
-            
-            {/* Top Badge: Fixed Mobile Layout Alignment */}
-            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#203A30]/20 text-[10px] sm:text-xs font-bold text-[#203A30] shadow-sm max-w-full text-center leading-tight">
-              <Sparkles className="w-3.5 h-3.5 text-[#C8A97E] shrink-0" />
-              <span>OFFICIAL BAGNODESIGN / SANIPEX GROUP MEA 2026</span>
-            </div>
+              {/* Sanipex Dark Gradient Vignette Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0E12] via-[#0D0E12]/50 to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0D0E12]/80 via-transparent to-transparent" />
 
-            <div className="space-y-4">
-              <h1 className="font-serif text-3xl sm:text-6xl xl:text-7xl font-light text-[#203A30] leading-[1.15] sm:leading-[1.1] tracking-tight">
-                Architectural <br />
-                <span className="font-normal italic text-[#203A30] teal-shimmer">Elegance</span> for Refined Spaces.
-              </h1>
-              <p className="text-sm sm:text-lg text-[#2D3748] font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Curated Sanitary Ware, Tiles, Spa Systems & Luxury Hardware from the official MEA 2026 Portfolio. Tailored for penthouses, 5-star hospitality, and architectural landmarks across the UAE & GCC.
-              </p>
-            </div>
-
-            {/* Badges Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#203A30]/20 shadow-sm flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15">
-                  <Award className="w-5 h-5 text-[#203A30]" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-bold text-[#203A30]">5000+ Italian</p>
-                  <p className="text-[10px] font-medium text-[#2D3748]">Crafted Products</p>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#203A30]/20 shadow-sm flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15">
-                  <ShieldCheck className="w-5 h-5 text-[#203A30]" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-bold text-[#203A30]">316 Stainless</p>
-                  <p className="text-[10px] font-medium text-[#2D3748]">Marine Grade Alloy</p>
-                </div>
-              </div>
-
-              <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl border border-[#203A30]/20 shadow-sm flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-[#E8EFEB] text-[#203A30] flex items-center justify-center shrink-0 border border-[#203A30]/15">
-                  <Sparkles className="w-5 h-5 text-[#203A30]" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-bold text-[#203A30]">10-Year Armour</p>
-                  <p className="text-[10px] font-medium text-[#2D3748]">Coating Warranty</p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-              <button
-                onClick={onRequestCatalogue}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#203A30] text-white font-bold text-xs tracking-wider uppercase hover:bg-[#2D4F42] transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group"
-              >
-                <span>Explore Catalog</span>
-                <ArrowRight className="w-4 h-4 text-[#C8A97E] group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              <a
-                href="https://wa.me/971547834673?text=Hello%20Zenaura%20Sanitary,%20I%20would%20like%20to%20request%20an%20instant%20quote%20for%20the%20MEA%202026%20Sanitary%20Ware%20Collection."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/90 backdrop-blur-md text-[#203A30] border-[1.5px] border-[#203A30] font-bold text-xs tracking-wider uppercase hover:bg-[#203A30] hover:text-white transition-all duration-300 shadow-sm flex items-center justify-center gap-2 group"
-              >
-                <MessageSquare className="w-4 h-4 text-emerald-700 fill-emerald-700/20 group-hover:text-white" />
-                <span>Instant WhatsApp Quote</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column: Hero Slider */}
-          <div className="lg:col-span-5 relative flex justify-center">
-            
-            {/* Multi-Color Dynamic Glowing Aura behind the slider */}
-            <div 
-              className="absolute -inset-6 bg-gradient-to-r from-[#203A30]/25 via-[#C8A97E]/30 via-[#8B5CF6]/20 to-[#06B6D4]/25 rounded-3xl blur-3xl opacity-85"
-              style={{ animation: 'spin 18s linear infinite' }}
-            />
-            
-            {/* Main Luxury Image Slider Card */}
-            <div className="relative bg-white/95 backdrop-blur-xl rounded-3xl p-2.5 sm:p-3 border border-[#203A30]/20 shadow-2xl overflow-hidden max-w-md w-full group z-10">
-              
-              {/* Image Container */}
-              <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-[#F4F6F5]">
-                {heroSlides.map((slide, index) => (
-                  <div
-                    key={index}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                      index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                    }`}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-
-                    {/* Fixed Mobile Floating Caption Overlay Pill (No Text Overflows!) */}
-                    <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 bg-white/95 backdrop-blur-md rounded-xl p-2.5 sm:p-3.5 border border-[#203A30]/20 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2">
-                      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 w-full">
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping shrink-0" />
-                        <div className="min-w-0 flex-1">
-                          <p className="text-[11px] sm:text-xs font-bold text-[#203A30] truncate">{slide.title}</p>
-                          <p className="text-[9px] sm:text-[10px] font-semibold text-[#2D3748] truncate">{slide.subtitle}</p>
-                        </div>
-                      </div>
-                      <span className="text-[8px] sm:text-[9px] font-bold tracking-wider text-white uppercase bg-[#203A30] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md shrink-0 self-start sm:self-auto">
-                        {slide.tag}
-                      </span>
+              {/* Overlay Content */}
+              <div className="absolute inset-0 z-20 flex items-center">
+                <div className="max-w-7xl mx-auto px-6 sm:px-12 w-full">
+                  <div className="max-w-2xl space-y-4 sm:space-y-6">
+                    
+                    {/* Tag Badge */}
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-bold text-[#D4AF37] tracking-widest uppercase">
+                      <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <span>{slide.tag}</span>
                     </div>
+
+                    {/* Headline */}
+                    <h1 className="font-serif text-3xl sm:text-6xl xl:text-7xl font-light leading-[1.1] tracking-tight text-white">
+                      {slide.title}
+                    </h1>
+
+                    {/* Subtitle */}
+                    <p className="text-sm sm:text-lg text-white/80 font-normal leading-relaxed max-w-xl">
+                      {slide.subtitle}
+                    </p>
+
+                    {/* CTAs */}
+                    <div className="flex flex-wrap items-center gap-4 pt-4">
+                      <a
+                        href={slide.categoryLink}
+                        className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#D4AF37] text-[#0D0E12] font-bold text-xs tracking-wider uppercase hover:bg-white transition-all duration-300 shadow-xl flex items-center gap-2 group/btn"
+                      >
+                        <span>{slide.ctaText}</span>
+                        <ArrowRight className="w-4 h-4 text-[#0D0E12] group-hover/btn:translate-x-1 transition-transform" />
+                      </a>
+
+                      <button
+                        onClick={onOpenInquiry}
+                        className="px-6 py-3.5 sm:px-7 sm:py-4 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/30 font-bold text-xs tracking-wider uppercase hover:bg-white hover:text-[#0D0E12] transition-all duration-300 shadow-md flex items-center gap-2"
+                      >
+                        <MessageSquare className="w-4 h-4 text-[#D4AF37]" />
+                        <span>Instant WhatsApp Quote</span>
+                      </button>
+                    </div>
+
                   </div>
-                ))}
-
-                {/* Slider Manual Prev/Next Buttons */}
-                <button
-                  onClick={handlePrev}
-                  className="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
-                  aria-label="Previous Slide"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-
-                <button
-                  onClick={handleNext}
-                  className="absolute right-2.5 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md hover:bg-white text-[#203A30] border border-[#203A30]/20 shadow-md flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
-                  aria-label="Next Slide"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-
-                {/* Slide Indicator Dots */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                  {heroSlides.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentSlide(idx)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
-                        idx === currentSlide ? 'w-5 bg-[#C8A97E]' : 'w-1.5 bg-white/60 hover:bg-white'
-                      }`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
                 </div>
               </div>
-
             </div>
+          );
+        })}
+
+        {/* Manual Left/Right Arrow Navigation Buttons */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20 flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0D0E12] transition-all duration-300 opacity-80 group-hover:opacity-100"
+          aria-label="Previous Slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+
+        <button
+          onClick={handleNext}
+          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20 flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0D0E12] transition-all duration-300 opacity-80 group-hover:opacity-100"
+          aria-label="Next Slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Bottom Sanipex Slider Progress & Play/Pause Controller */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-black/50 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20">
+          
+          <button
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="text-white/80 hover:text-[#D4AF37] transition-colors p-1"
+            aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
+          >
+            {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+          </button>
+
+          <span className="text-xs font-mono text-[#D4AF37] font-bold">
+            0{currentSlide + 1} / 0{slides.length}
+          </span>
+
+          <div className="flex items-center gap-2">
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  idx === currentSlide ? 'w-8 bg-[#D4AF37]' : 'w-2 bg-white/40 hover:bg-white'
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
           </div>
 
         </div>
+
       </div>
+
+      {/* Sanipex Group Value Proposition Bar below Slider */}
+      <div className="bg-[#14161F] py-6 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+            
+            <div className="flex items-center justify-center sm:justify-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-[#203A30] text-[#D4AF37] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                <Award className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">Official MEA 2026 Portfolio</p>
+                <p className="text-[11px] text-white/60 font-medium">5,000+ European & Italian Crafted Items</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center sm:justify-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-[#203A30] text-[#D4AF37] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">10-Year Armour Guarantee</p>
+                <p className="text-[11px] text-white/60 font-medium">1,000 Hours Salt Spray Tested</p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center sm:justify-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-[#203A30] text-[#D4AF37] border border-[#D4AF37]/30 flex items-center justify-center shrink-0">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">Grade 316 Stainless Steel</p>
+                <p className="text-[11px] text-white/60 font-medium">Marine-Grade Outdoor & Spa Systems</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }

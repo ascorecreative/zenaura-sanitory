@@ -3,8 +3,8 @@ import HeaderNav from './components/HeaderNav';
 import HeroSection from './components/HeroSection';
 import CollectionMatrix from './components/CollectionMatrix';
 import CategoryGrid from './components/CategoryGrid';
+import BrandsShowcase from './components/BrandsShowcase';
 import MaterialStudio from './components/MaterialStudio';
-import LandmarkProjects from './components/LandmarkProjects';
 import InquiryDrawer from './components/InquiryDrawer';
 import ShowroomContact from './components/ShowroomContact';
 import Footer from './components/Footer';
@@ -55,9 +55,11 @@ export default function App() {
           onSelectCategory={(cat) => handleOpenDetailModal(cat)}
         />
 
-        <MaterialStudio />
+        <BrandsShowcase 
+          onOpenInquiry={() => handleOpenInquiryDrawer()}
+        />
 
-        <LandmarkProjects />
+        <MaterialStudio />
 
         <InquiryDrawer 
           isOpen={inquiryDrawerOpen}
@@ -71,7 +73,7 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
-      {/* Mobile Floating Bottom Dock (Hides on Scroll UP, Shows on Scroll DOWN or IDLE) */}
+      {/* Mobile Floating Bottom Dock */}
       <MobileBottomDock 
         onOpenInquiry={() => handleOpenInquiryDrawer()} 
       />

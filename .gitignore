@@ -19,6 +19,7 @@ build/
 .vscode/
 .idea/
 *.local
+*.code-workspace
 
 # Logs
 npm-debug.log*

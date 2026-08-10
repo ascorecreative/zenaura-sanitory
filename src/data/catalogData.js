@@ -93,17 +93,18 @@ export const COLLECTIONS_DATA = [
 
 export const CATEGORIES_DATA = [
   {
-    id: 'mixers',
-    title: 'Luxury Mixers & Brassware',
-    subtitle: 'La Dolce Vita Italian Series & PVD Finishes',
+    id: 'bathroom',
+    title: 'Bathroom',
+    subtitle: 'Taps, Basins, Furniture, WC, Bidet & Flushing',
     icon: 'Droplets',
-    image: '/images/sestriere_collection.png',
+    image: '/images/hero_pedestal.png',
     items: [
-      'Monoblock Basin Mixers',
-      'Concealed 2-Way & 3-Way Shower Mixers',
-      'Floor-Mounted Freestanding Bathtub Fillers',
-      'Wall-Mounted Spouts & Bidet Mixers',
-      'Sensor-Activated Touchless Brassware'
+      'Taps (Basin Mixers, Wall Faucets, Bath Fillers)',
+      'Basin (Countertop Vessel Bowls, Pedestals, Integrated)',
+      'Bathroom Furniture (Vanity Units, Cabinets, Mirrors)',
+      'WC (Rimless Wall-Hung, Smart Toilet Seats)',
+      'Bidet Spray (Heavy Brass Shattafs, Hoses & Valves)',
+      'Flushing Systems (Glass & Sensor Flush Plates, Cisterns)'
     ],
     specs: {
       warranty: '10 Years Warranty',
@@ -112,170 +113,143 @@ export const CATEGORIES_DATA = [
     }
   },
   {
-    id: 'bagnospa',
-    title: 'Bagnospa & Showering',
-    subtitle: 'Thermostatic Recessed LED Rain & Laminar Jets',
-    icon: 'ShowerHead',
-    image: '/images/studio316_collection.png',
-    items: [
-      'Recessed LED Chromotherapy Rain Shower Heads',
-      'Cascade Waterfall & Laminar Stream Jets',
-      'Multi-Function Concealed Body Sprays',
-      'Smart Thermostatic Push-Button Control Valves',
-      'Grade 316 Stainless Steel Outdoor Shower Columns'
-    ],
-    specs: {
-      flowControl: 'Eco-Flow Water Conservation',
-      lighting: 'Integrated Low-Voltage RGB LED',
-      material: 'Grade 316 Marine Stainless Steel'
-    }
-  },
-  {
-    id: 'furniture',
-    title: 'Furniture & Sanitaryware',
-    subtitle: 'Rimless Wall-Mounted WCs & Touchless Cisterns',
-    icon: 'Bath',
-    image: '/images/carlyle_collection.png',
-    items: [
-      'Wall-Mounted Modular Vanities',
-      'Integrated Custom Porcelain Wash Basins',
-      'Rimless Hygienic Wall-Mounted WCs',
-      'Bidet Solutions & Smart Heated Seats',
-      'Concealed Touchless Pneumatic Cistern Plates'
-    ],
-    specs: {
-      glaze: 'AquaClean Anti-Bacterial Nanoglaze',
-      flush: 'Dual Flush 3/4.5L Eco Technology',
-      mounting: 'Heavy-Duty Steel Carrier Systems'
-    }
-  },
-  {
-    id: 'basins',
-    title: 'Basins & Countertops',
-    subtitle: 'Murano Glass, Alpine Porcelain & Bagnoquartz',
-    icon: 'Box',
-    image: '/images/ginza_collection.png',
-    items: [
-      'Alpine Custom Cut Porcelain Slabs',
-      'Murano Handcrafted Crystal Glass Vessels',
-      'Natural Italian Travertine & Calacatta Marble',
-      'Bagnoquartz Composite Stone Countertops',
-      'Artisan Concrete & Sculptural Freestanding Basins'
-    ],
-    specs: {
-      thickness: 'Slim 4mm Rim Profile',
-      durability: 'Scratch & Stain Resistant',
-      origin: 'Crafted in Italy & Spain'
-    }
-  },
-  {
-    id: 'bathing',
-    title: 'Bathing, Enclosures & Wetrooms',
-    subtitle: 'Freestanding Tubs & Glass Wetroom Systems',
-    icon: 'Sparkles',
-    image: '/images/hero_bathtub.png',
-    items: [
-      'Bagnoquartz Freestanding Soaking Bathtubs',
-      'Custom Frameless Glass Wetroom Enclosures',
-      'Tile-Insert Stainless Steel Linear Drains',
-      'Concealed Floor Drain Channels',
-      'Integrated Heated Towel Warmers'
-    ],
-    specs: {
-      glass: '8mm Tempered Easy-Clean Glass',
-      drainage: 'High-Capacity 50L/min Flow Rate',
-      insulation: 'Thermal-Heat Retention Resin'
-    }
-  },
-  {
     id: 'tiles',
-    title: 'Luxury Architectural Tiles',
-    subtitle: 'Large Format Porcelain Slabs & Terrazzo',
+    title: 'Tiles',
+    subtitle: 'Standard Format, Outdoor Tiles & Small Format',
     icon: 'Layers',
     image: '/images/fonteyn_collection.png',
     items: [
-      '120x280cm Large Format Porcelain Wall Slabs',
-      'Bookmatched Italian Marble Effect Tiles',
-      'Architectural Terrazzo & Fluted Wall Panels',
-      'Anti-Slip R11 Outdoor Patio Porcelain Slabs',
-      'Tactile Metallic & Textured Wall Coverings'
+      'Standard Format Tiles (Wall & Floor Porcelain)',
+      'Outdoor Tiles (R11 Anti-Slip Terrace & Poolside)',
+      'Small Format Tiles (Metallic Kitkat & Decorative Mosaic)'
     ],
     specs: {
       absorption: '<0.1% Ultra-Low Water Absorption',
       finish: 'Polished, Honed & Micro-Structured',
       rectified: '100% Precision Rectified Edges'
     }
+  },
+  {
+    id: 'kitchen',
+    title: 'Kitchen Appliance',
+    subtitle: 'Sink, Taps, Refrigerators & Freezers',
+    icon: 'Box',
+    image: '/images/kitchen.png',
+    items: [
+      'Kitchen Sink (IX304 Stainless Steel & Ceramic)',
+      'Kitchen Taps (Commercial Pull-Out Spray & Pot Fillers)',
+      'Refrigerators & Freezers (Integrated & Beverage Coolers)'
+    ],
+    specs: {
+      material: 'Grade 304 Stainless Steel',
+      soundproof: 'Acoustic Sound-Deadening Insulation',
+      finish: 'Brushed Steel & Gunmetal'
+    }
+  },
+  {
+    id: 'outdoor',
+    title: 'Outdoor Living',
+    subtitle: 'Sunbed, Poolbed & Sofa Set',
+    icon: 'Sparkles',
+    image: '/images/cat_outdoor.png',
+    items: [
+      'Sunbed (Teak Wood & Aluminium Loungers)',
+      'Poolbed (Weatherproof Cushion Daybeds)',
+      'Sofa Set (Resort Outdoor Lounge Seating & Tables)'
+    ],
+    specs: {
+      weathering: 'UV & All-Weather Resistance',
+      fabric: 'Sunbrella Marine Outdoor Fabrics',
+      frame: 'Teak & Powder-Coated Aluminium'
+    }
+  },
+  {
+    id: 'slabs',
+    title: 'Slabs',
+    subtitle: 'Indoor & Outdoor Architectural Slabs',
+    icon: 'ShowerHead',
+    image: '/images/cat_slabs.png',
+    items: [
+      'Indoor Slabs (120x280cm Calacatta & Travertine Slabs)',
+      'Outdoor Slabs (20mm Heavy Duty Patio Porcelain Slabs)'
+    ],
+    specs: {
+      format: '120x280cm & 160x320cm Jumbo Slabs',
+      thickness: '6mm, 12mm & 20mm Options',
+      veinMatch: 'Bookmatched Seamless Continuity'
+    }
   }
 ];
 
 export const MATERIALS_DATA = {
-  metallics: [
-    { name: 'PVD Gold', hex: '#D4AF37', texture: 'Polished Champagne Gold', code: 'PVD-GLD-01' },
-    { name: 'PVD Oyster', hex: '#C5C5C0', texture: 'Brushed Platinum Pearl', code: 'PVD-OYS-02' },
+  warmTones: [
+    { name: 'PVD Oyster', hex: '#C5C5C0', texture: 'Brushed Platinum Pearl', code: 'PVD-OYS-01' },
+    { name: 'PVD Santiago', hex: '#635345', texture: 'Dark Titanium Copper Alloy', code: 'PVD-STG-02' },
     { name: 'Soft Bronze', hex: '#8C6D53', texture: 'Warm Antique Satin Bronze', code: 'PVD-BRZ-03' },
-    { name: 'Brushed Nickel', hex: '#A3A39F', texture: 'Silky Fine Brushed Steel', code: 'PVD-NCK-04' },
-    { name: 'PVD Santiago', hex: '#635345', texture: 'Dark Titanium Copper Alloy', code: 'PVD-STG-05' },
-    { name: 'Chrome', hex: '#E5E7EB', texture: 'Mirror Polished Pure Chrome', code: 'CHM-MIR-06' }
+    { name: 'PVD Gold', hex: '#D4AF37', texture: 'Polished Champagne Gold', code: 'PVD-GLD-04' },
+    { name: 'PVD Soft Burgundy', hex: '#6B3E44', texture: 'Satin Deep Velvet Burgundy', code: 'PVD-BUR-05' }
   ],
-  armour: [
-    { name: 'Cocoa', hex: '#4A3B32', texture: 'Matte Tactile Warm Earth', code: 'ARM-CCA-10' },
-    { name: 'Truffle', hex: '#6B5E55', texture: 'Deep Greige Velvet Touch', code: 'ARM-TRF-11' },
-    { name: 'Blueberry', hex: '#2A364F', texture: 'Deep Midnight Matte Blue', code: 'ARM-BLU-12' },
-    { name: 'Mandarin', hex: '#C85A32', texture: 'Terracotta Sunset Matte', code: 'ARM-MND-13' },
-    { name: 'Lip Gloss', hex: '#A83B4C', texture: 'Satin Crimson Accent Coating', code: 'ARM-LIP-14' },
-    { name: 'Sage', hex: '#7A8B7B', texture: 'Calming Botanical Olive Green', code: 'ARM-SGE-15' },
-    { name: 'Baby Pink', hex: '#E8C5C8', texture: 'Soft Architectural Blush', code: 'ARM-PNK-16' },
-    { name: 'Misty Grey', hex: '#B8BCBF', texture: 'Neutral Concrete Soft Smoke', code: 'ARM-GRY-17' }
+  timelessClassics: [
+    { name: 'Matt Black', hex: '#1C1D21', texture: 'Ultra-Matte Architectural Obsidian', code: 'CLS-[#1C1D21]-01' },
+    { name: 'Brushed Nickel', hex: '#A3A39F', texture: 'Silky Fine Brushed Steel', code: 'CLS-NCK-02' },
+    { name: 'Chrome', hex: '#E5E7EB', texture: 'Mirror Polished Pure Chrome', code: 'CLS-CHM-03' },
+    { name: 'Gold', hex: '#E6C657', texture: 'Rich Warm Polished Gold', code: 'CLS-GLD-04' },
+    { name: 'Brushed Stainless Steel', hex: '#94A3B8', texture: 'AISI Grade 304 Satin Steel', code: 'CLS-[#94A3B8]-05' },
+    { name: 'Anthracite', hex: '#4B5563', texture: 'Deep Graphite Slate Finish', code: 'CLS-[#4B5563]-06' }
   ],
-  materials: [
-    { name: 'Italian Travertine', hex: '#D8C3A5', texture: 'Vein-Cut Cross-Filled Natural Travertine', code: 'MAT-TRV-20' },
-    { name: 'Calacatta Viola', hex: '#E5D6DC', texture: 'Pure White Marble with Rich Cabernet Veining', code: 'MAT-VLA-21' },
-    { name: 'Murano Glass', hex: '#E0F2FE', texture: 'Facetted Crystal Clear Venetian Glass', code: 'MAT-MRN-22' },
-    { name: '316 SS Marine', hex: '#94A3B8', texture: 'AISI 316L Salt-Resistant Brushed Alloy', code: 'MAT-316-23' }
+  armourCollection: [
+    { name: 'Armour Cocoa', hex: '#4A3B32', texture: 'Matte Tactile Warm Earth Coating', code: 'ARM-CCA-01' },
+    { name: 'Armour Truffle', hex: '#6B5E55', texture: 'Deep Greige Velvet Touch Coating', code: 'ARM-TRF-02' },
+    { name: 'Armour Blueberry', hex: '#2A364F', texture: 'Deep Midnight Matte Blue Coating', code: 'ARM-BLU-03' },
+    { name: 'Armour Mandarin', hex: '#C85A32', texture: 'Terracotta Sunset Matte Coating', code: 'ARM-MND-04' },
+    { name: 'Armour Lip Gloss', hex: '#A83B4C', texture: 'Satin Crimson Accent Coating', code: 'ARM-LIP-05' },
+    { name: 'Armour Sage', hex: '#7A8B7B', texture: 'Calming Botanical Olive Green Coating', code: 'ARM-SGE-06' },
+    { name: 'Armour Baby Pink', hex: '#E8C5C8', texture: 'Soft Architectural Blush Coating', code: 'ARM-PNK-07' },
+    { name: 'Armour Misty Grey', hex: '#B8BCBF', texture: 'Neutral Concrete Soft Smoke Coating', code: 'ARM-GRY-08' }
   ]
 };
 
-export const PROJECTS_DATA = [
+export const BRANDS_DATA = [
   {
-    name: 'Bluewaters Island',
-    location: 'Dubai, UAE',
-    type: 'Luxury Residential & Hospitality',
-    details: 'Custom Bagnodesign brassware, freestanding tubs, and large-format porcelain wall slabs installed across ultra-luxury seafront apartments.',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80'
+    name: 'BAGNODESIGN',
+    tagline: 'Luxury Sanitaryware & Brassware',
+    origin: 'London • Milan',
+    description: 'Premier Italian and UK engineered mixers, sanitaryware, and Bagnospa wellness systems.',
+    logoText: 'BAGNODESIGN'
   },
   {
-    name: 'Museum of the Future',
-    location: 'Dubai, UAE',
-    type: 'Architectural Icon & Public Landmark',
-    details: 'Touchless concealed sensor brassware and custom stainless steel wash stations engineered for futuristic high-traffic public space excellence.',
-    image: 'https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=1000&q=80'
+    name: 'AQUAECO',
+    tagline: 'Water Conservation & Touchless Solutions',
+    origin: 'European Standards',
+    description: 'WRAS and ESMA certified electronic sensor taps, aerators, and water management technology.',
+    logoText: 'AQUAECO'
   },
   {
-    name: 'Zayed International Airport',
-    location: 'Abu Dhabi, UAE',
-    type: 'International Terminal & VIP Lounges',
-    details: 'Heavy-duty WRAS-approved sanitaryware, touchless pneumatic cisterns, and water-conserving commercial mixer solutions.',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80'
+    name: 'SANIPEX GROUP',
+    tagline: 'Architectural Tiles, Slabs & Outdoor Living',
+    origin: 'Dubai • Worldwide',
+    description: 'Global leader in large-format porcelain slabs, outdoor lounge collections, and surface tiles.',
+    logoText: 'SANIPEX GROUP'
   },
   {
-    name: 'The Lana - Dorchester Collection',
-    location: 'Business Bay, Dubai',
-    type: '5-Star Ultra-Luxury Hotel & Spa',
-    details: 'Carlyle and Sestriere bespoke gold mixers with Murano glass levers, paired with natural Calacatta marble vanity slabs in penthouse suites.',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80'
+    name: 'BYSTRO',
+    tagline: 'Kitchen Mixers & Professional Sinks',
+    origin: 'Commercial Kitchen Tech',
+    description: 'Heavy-duty pull-out spray kitchen mixers, pot fillers, and IX304 stainless steel undermount sinks.',
+    logoText: 'BYSTRO'
   },
   {
-    name: 'VOX Cinemas',
-    location: 'UAE & Kingdom of Saudi Arabia',
-    type: 'Commercial Entertainment Venues',
-    details: 'High-traffic commercial sanitary solutions, modern matte black sensor mixers, and integrated solid surface wash basins.',
-    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=80'
+    name: 'HEWI',
+    tagline: 'German Engineering & Supportive Hardware',
+    origin: 'Made in Germany',
+    description: 'Award-winning accessible sanitaryware, supportive rails, and hardware compatible with Ginza Junior.',
+    logoText: 'HEWI'
   },
   {
-    name: 'Jumeirah Al Naseem',
-    location: 'Jumeirah, Dubai',
-    type: 'Beachfront Resort & Spa Villas',
-    details: 'Grade 316 Marine Stainless Steel outdoor poolside showers, freestanding soaking tubs, and custom rain shower chromotherapy systems.',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80'
+    name: 'SANAURA',
+    tagline: 'Spanish Alabaster Lighting & Luxury Mirrors',
+    origin: 'Spain',
+    description: 'Artisan hand-carved Spanish alabaster wall sconces and anti-fog backlit LED mirrors for Carlyle collection.',
+    logoText: 'SANAURA'
   }
 ];
