@@ -123,31 +123,32 @@ export const CATEGORIES_DATA = [
     title: 'Tiles',
     subtitle: 'Standard Format, Outdoor Tiles & Small Format',
     icon: 'Layers',
-    image: '/images/addon/image18.png',
+    image: '/images/cat_tiles_terrazzo.jpg',
     items: [
       'Standard Format Tiles (Wall & Floor Porcelain)',
       'Outdoor Tiles (R11 Anti-Slip Terrace & Poolside)',
-      'Small Format Tiles (Metallic Kitkat & Decorative Mosaic)'
+      'Small Format Tiles (Metallic Kitkat & Decorative Terrazzo)'
     ],
     specs: {
       absorption: '<0.1% Ultra-Low Water Absorption',
-      finish: 'Polished, Honed & Micro-Structured',
+      finish: 'Polished, Honed & Terrazzo Aggregate',
       rectified: '100% Precision Rectified Edges'
     }
   },
   {
     id: 'kitchen',
     title: 'Kitchen Appliance',
-    subtitle: 'Sink, Taps, Refrigerators & Freezers',
+    subtitle: 'Bystro Stainless Steel Appliances, Sinks & Taps',
     icon: 'Box',
-    image: '/images/sanipex_slides/slide2_outdoor_kitchen.webp',
+    image: '/images/cat_kitchen_bystro.png',
     items: [
+      'Bystro Professional Kitchen Appliances & Ovens',
       'Kitchen Sink (IX304 Stainless Steel & Ceramic)',
       'Kitchen Taps (Commercial Pull-Out Spray & Pot Fillers)',
       'Refrigerators & Freezers (Integrated & Beverage Coolers)'
     ],
     specs: {
-      material: 'Grade 304 Stainless Steel',
+      material: 'Grade 304 Stainless Steel & Knurled Metal Controls',
       soundproof: 'Acoustic Sound-Deadening Insulation',
       finish: 'Brushed Steel & Gunmetal'
     }
@@ -189,29 +190,29 @@ export const CATEGORIES_DATA = [
 
 export const MATERIALS_DATA = {
   warmTones: [
-    { name: 'PVD Oyster', hex: '#C5C5C0', texture: 'Brushed Platinum Pearl', code: 'PVD-OYS-01' },
-    { name: 'PVD Santiago', hex: '#635345', texture: 'Dark Titanium Copper Alloy', code: 'PVD-STG-02' },
-    { name: 'Soft Bronze', hex: '#8C6D53', texture: 'Warm Antique Satin Bronze', code: 'PVD-BRZ-03' },
-    { name: 'PVD Gold', hex: '#D4AF37', texture: 'Polished Champagne Gold', code: 'PVD-GLD-04' },
-    { name: 'PVD Soft Burgundy', hex: '#6B3E44', texture: 'Satin Deep Velvet Burgundy', code: 'PVD-BUR-05' }
+    { name: 'Chrome', hex: '#E5E7EB', texture: 'Polished Stainless Steel / Brushed Chrome', code: 'FIN-CHM-01' },
+    { name: 'Inox / Brushed Nickel', hex: '#B5B09C', texture: 'Brushed Inox / Satin Nickel / Platinum Matt', code: 'FIN-INX-02' },
+    { name: 'PVD Brushed Gold', hex: '#D1A751', texture: 'PVD Gold Brushed Satin / Matt Gold / Durabrass', code: 'FIN-GLD-03' },
+    { name: 'PVD Miele / Oyster', hex: '#EAD5A7', texture: 'PVD Oyster / Satin Gold / Champagne Soft Gold', code: 'FIN-OYS-04' },
+    { name: 'PVD Gold', hex: '#E5C544', texture: 'Polished Gold / Polished Brass', code: 'FIN-GLD-05' }
   ],
   timelessClassics: [
-    { name: 'Matt Black', hex: '#1C1D21', texture: 'Ultra-Matte Architectural Obsidian', code: 'CLS-BLK-01' },
-    { name: 'Brushed Nickel', hex: '#A3A39F', texture: 'Silky Fine Brushed Steel', code: 'CLS-NCK-02' },
-    { name: 'Chrome', hex: '#E5E7EB', texture: 'Mirror Polished Pure Chrome', code: 'CLS-CHM-03' },
-    { name: 'Gold', hex: '#E6C657', texture: 'Rich Warm Polished Gold', code: 'CLS-GLD-04' },
-    { name: 'Brushed Stainless Steel', hex: '#94A3B8', texture: 'AISI Grade 304 Satin Steel', code: 'CLS-[#94A3B8]-05' },
-    { name: 'Anthracite', hex: '#4B5563', texture: 'Deep Graphite Slate Finish', code: 'CLS-[#4B5563]-06' }
+    { name: 'Velvet Black', hex: '#121212', texture: 'Matt Black / Structured / Hammercoated Black', code: 'FIN-BLK-01' },
+    { name: 'Red Canyon / Santiago', hex: '#A46E56', texture: 'PVD Santiago / PVD Red Gold / PVD Copper', code: 'FIN-STG-02' },
+    { name: 'Soft Bronze', hex: '#786447', texture: 'Matt Bronze / Brushed Bronze / Tuscany Bronze', code: 'FIN-BRZ-03' },
+    { name: 'Brushed Stainless Steel', hex: '#D4D8DF', texture: 'Satin Stainless Steel / AISI 304', code: 'FIN-[#D4D8DF]-04' },
+    { name: 'Anthracite', hex: '#4D5054', texture: 'PVD Brushed Black / Gun Metal / Satin Graphite', code: 'FIN-[#4D5054]-05' }
   ],
   armourCollection: [
-    { name: 'Armour Cocoa', hex: '#4A3B32', texture: 'Matte Tactile Warm Earth Coating', code: 'ARM-CCA-01' },
-    { name: 'Armour Truffle', hex: '#6B5E55', texture: 'Deep Greige Velvet Touch Coating', code: 'ARM-TRF-02' },
-    { name: 'Armour Blueberry', hex: '#2A364F', texture: 'Deep Midnight Matte Blue Coating', code: 'ARM-BLU-03' },
-    { name: 'Armour Mandarin', hex: '#C85A32', texture: 'Terracotta Sunset Matte Coating', code: 'ARM-MND-04' },
-    { name: 'Armour Lip Gloss', hex: '#A83B4C', texture: 'Satin Crimson Accent Coating', code: 'ARM-LIP-05' },
-    { name: 'Armour Sage', hex: '#7A8B7B', texture: 'Calming Botanical Olive Green Coating', code: 'ARM-SGE-06' },
-    { name: 'Armour Baby Pink', hex: '#E8C5C8', texture: 'Soft Architectural Blush Coating', code: 'ARM-PNK-07' },
-    { name: 'Armour Misty Grey', hex: '#B8BCBF', texture: 'Neutral Concrete Soft Smoke Coating', code: 'ARM-GRY-08' }
+    { name: 'Soft Burgundy', hex: '#8C584E', texture: 'Brushed Copper PVD / PVD Bronze / Red Gold', code: 'ARM-BUR-01' },
+    { name: 'Armour Cocoa', hex: '#4A3B32', texture: 'Matte Tactile Warm Earth Coating', code: 'ARM-CCA-02' },
+    { name: 'Armour Truffle', hex: '#6B5E55', texture: 'Deep Greige Velvet Touch Coating', code: 'ARM-TRF-03' },
+    { name: 'Armour Blueberry', hex: '#2A364F', texture: 'Deep Midnight Matte Blue Coating', code: 'ARM-BLU-04' },
+    { name: 'Armour Mandarin', hex: '#C85A32', texture: 'Terracotta Sunset Matte Coating', code: 'ARM-MND-05' },
+    { name: 'Armour Lip Gloss', hex: '#A83B4C', texture: 'Satin Crimson Accent Coating', code: 'ARM-LIP-06' },
+    { name: 'Armour Sage', hex: '#7A8B7B', texture: 'Calming Botanical Olive Green Coating', code: 'ARM-SGE-07' },
+    { name: 'Armour Baby Pink', hex: '#E8C5C8', texture: 'Soft Architectural Blush Coating', code: 'ARM-PNK-08' },
+    { name: 'Armour Misty Grey', hex: '#B8BCBF', texture: 'Neutral Concrete Soft Smoke Coating', code: 'ARM-GRY-09' }
   ]
 };
 
@@ -271,9 +272,9 @@ export const BRANDS_DATA = [
   },
   {
     name: 'BYSTRO',
-    tagline: 'Kitchen Mixers & Professional Sinks',
+    tagline: 'Kitchen Appliances, Mixers & Sinks',
     origin: 'Commercial Kitchen Tech',
-    description: 'Heavy-duty pull-out spray kitchen mixers, pot fillers, and IX304 stainless steel undermount sinks.',
+    description: 'Heavy-duty pull-out spray kitchen mixers, pot fillers, ovens, and IX304 stainless steel undermount sinks.',
     logoText: 'BYSTRO'
   },
   {
