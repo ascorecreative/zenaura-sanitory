@@ -30,19 +30,19 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
           {/* Left: Phone & Email */}
           <div className="flex items-center gap-6">
             <a 
-              href="tel:+971547834673" 
+              href="tel:+971541414160" 
               className="flex items-center gap-1.5 font-medium hover:text-[#D4AF37] transition-colors duration-200"
             >
               <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>+971 54 783 4673</span>
+              <span>+971 54 141 4160</span>
             </a>
             <span className="text-[#203A30]/30">|</span>
             <a 
-              href="mailto:zenauratrading@outlook.com" 
+              href="mailto:info@zenauratrading.com" 
               className="flex items-center gap-1.5 font-medium hover:text-[#D4AF37] transition-colors duration-200"
             >
               <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>zenauratrading@outlook.com</span>
+              <span>info@zenauratrading.com</span>
             </a>
           </div>
 

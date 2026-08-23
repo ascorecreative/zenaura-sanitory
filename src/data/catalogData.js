@@ -1,70 +1,74 @@
 export const COLLECTIONS_DATA = [
   {
-    id: 'carlyle',
-    name: 'Carlyle Collection',
-    tagline: '5-Star Hotel Glamour & Timeless Alabaster Luminosity',
-    category: 'Hotel Luxe',
-    image: '/images/carlyle_collection.png',
+    id: 'ginza',
+    name: 'Ginza & Ginza Junior',
+    tagline: 'The Art of Playful Living & Japanese Boutique Zen',
+    category: 'Japandi & Zen',
+    image: '/images/addon/image1.png',
+    secondaryImage: '/images/addon/image2.png',
     features: [
-      'Scalloped mirror edge silhouettes',
-      'Handcrafted Spanish alabaster wall sconce integration',
-      'PVD Brushed Gold & Santiago hardware finishes',
-      'Italian Calacatta Viola marble countertops'
+      'Tokyo Ginza architectural innovation',
+      'Japanese boutique hotel aesthetic',
+      'Armour Baby Pink & Misty Grey matte coatings',
+      'Ultra-thin 4mm rim porcelain craftsmanship'
     ],
-    description: 'Designed for signature hospitality and penthouse residences, the Carlyle Collection brings classic Art Deco curves into 21st-century luxury with soft ambient backlighting and precision Italian metalwork.',
-    badge: 'Hotel Luxe Signature'
+    description: 'Channelling the dynamic energy of Tokyo’s Ginza district, this collection captures the city’s architectural innovation and creative spirit into a cohesive bathroom solution. Taking cues from Japanese boutique hotel interiors, Ginza leads with visual impact for spaces that feel effortlessly cool and expressive.',
+    badge: 'Japanese Zen'
   },
   {
     id: 'fonteyn',
     name: 'Fonteyn Collection',
-    tagline: 'Transitional 1940s-60s Sculptural Elegance',
+    tagline: 'Mid-Century Curves & Sculptural Refinement',
     category: 'Mid-Century',
-    image: '/images/fonteyn_collection.png',
+    image: '/images/addon/image3.png',
+    secondaryImage: '/images/addon/image4.png',
     features: [
-      'Curved mid-century modern vanity profiles',
+      'Fluidity and finesse of movement',
+      'Refinement of mid-century modern design',
       'Integrated terrazzo & custom stone countertops',
-      'Dual-tone metal & fluted drawer fronts',
-      'Precision ceramic undermount basins'
+      'Sculptural curved vanity profiles'
     ],
-    description: 'Inspired by iconic mid-century European design, Fonteyn marries fluid organic curves with engineered terrazzo surfaces and hand-polished brass handles.',
-    badge: 'Transitional Icon'
+    description: 'A sophisticated new range defined by its graceful curves, sculptural forms and timeless elegance, the Fonteyn collection captures the fluidity and finesse of movement, echoing the refinement of mid-century modern design.',
+    badge: 'Mid-Century Icon'
   },
   {
-    id: 'ginza',
-    name: 'Ginza & Ginza Junior',
-    tagline: 'Japandi Zen & Architectural Minimalist Basins',
-    category: 'Japandi & Zen',
-    image: '/images/ginza_collection.png',
+    id: 'carlyle',
+    name: 'Carlyle Collection',
+    tagline: 'Understated Hotel Luxury & Balanced Proportions',
+    category: 'Hotel Luxe',
+    image: '/images/addon/image5.png',
+    secondaryImage: '/images/addon/image6.png',
     features: [
-      'Armour Baby Pink & Misty Grey matte coating',
-      'Ultra-thin 4mm rim porcelain craftsmanship',
-      'Floating natural oak console pairing',
-      'Concealed water drainage technology'
+      '5-star hotel luxury experience',
+      'Scalloped mixer edges and rich finishes',
+      'Spanish alabaster Carlyle wall lighting by SANAURA',
+      'Complete bathroom solution across mixers, furniture & ceramics'
     ],
-    description: 'Ginza embodies Japanese boutique hotel tranquility, offering tactile organic basins in curated pastels and earth tones paired with wall-mounted titanium mixers.',
-    badge: 'Japandi Masterpiece'
+    description: 'A modern take on the flawlessly manicured bathrooms of the world’s finest hotels, Carlyle embodies understated luxury with rich finishes, balanced proportions and refined detailing across mixers, showering, furniture, basins, bathtub, WCs, lighting and accessories to offer a complete bathroom solution.',
+    badge: 'Hotel Luxe Signature'
   },
   {
-    id: 'sestriere',
-    name: 'Sestriere & Isabel',
-    tagline: 'Jewellery-Inspired Brassware & Italian Marble Handles',
+    id: 'isabel',
+    name: 'Isabel Collection',
+    tagline: 'Murano Master Glassmakers Artisanal Heritage',
     category: 'Featured',
-    image: '/images/sestriere_collection.png',
+    image: '/images/addon/image7.png',
+    secondaryImage: '/images/addon/image8.png',
     features: [
-      'Murano handcrafted crystal glass lever handles',
-      'Genuine Calacatta Viola & Italian Travertine inserts',
-      'High-durability PVD Oyster & Champagne Gold',
-      'Zero-lead eco-brass inner fluid channels'
+      'Master glassmakers legacy of Murano, Venice',
+      'Artisanal glassblowing tradition transformed into modern design',
+      'Hand-faceted crystal glass handles & spout inserts',
+      'PVD Oyster & Champagne Gold hardware pairing'
     ],
-    description: 'A celebration of Haute Joaillerie for the bath. Sestriere incorporates hand-faceted Italian marble and Murano glass into precision quarter-turn ceramic disc mixers.',
-    badge: 'Haute Craftsmanship'
+    description: 'Isabel reinterprets the legacy of the master glassmakers of the Italian island of Murano, transforming artisanal tradition into a contemporary design statement for the bathroom.',
+    badge: 'Murano Artisanal'
   },
   {
     id: 'studio316',
     name: 'Studio 316 & Beach House',
     tagline: 'Marine-Grade 316 Stainless Steel Outdoor & Spa Columns',
     category: 'Industrial Chic',
-    image: '/images/studio316_collection.png',
+    image: '/images/addon/image9.png',
     features: [
       'AISI 316L Marine Grade Stainless Steel construction',
       'Corrosion & salt-air resistant brushed finish',
@@ -79,7 +83,7 @@ export const COLLECTIONS_DATA = [
     name: 'Toko Flavours & Toko Groove',
     tagline: 'Color-Rich Armour Coatings & 70s Fluted Textures',
     category: 'Mid-Century',
-    image: '/images/toko_collection.png',
+    image: '/images/addon/image10.png',
     features: [
       'Retro 70s vertical fluted vanity front panels',
       'Armour Cocoa & Truffle matte tactile coatings',
@@ -97,7 +101,7 @@ export const CATEGORIES_DATA = [
     title: 'Bathroom',
     subtitle: 'Taps, Basins, Furniture, WC, Bidet & Flushing',
     icon: 'Droplets',
-    image: '/images/hero_pedestal.png',
+    image: '/images/addon/image5.png',
     items: [
       'Taps (Basin Mixers, Wall Faucets, Bath Fillers)',
       'Basin (Countertop Vessel Bowls, Pedestals, Integrated)',
@@ -109,7 +113,7 @@ export const CATEGORIES_DATA = [
     specs: {
       warranty: '10 Years Warranty',
       certification: 'WRAS & ESMA Certified',
-      cartridge: 'Kerox European Ceramic Discs'
+      cartridge: 'European Precision Ceramic Discs'
     }
   },
   {
@@ -117,7 +121,7 @@ export const CATEGORIES_DATA = [
     title: 'Tiles',
     subtitle: 'Standard Format, Outdoor Tiles & Small Format',
     icon: 'Layers',
-    image: '/images/fonteyn_collection.png',
+    image: '/images/addon/image3.png',
     items: [
       'Standard Format Tiles (Wall & Floor Porcelain)',
       'Outdoor Tiles (R11 Anti-Slip Terrace & Poolside)',
@@ -211,18 +215,39 @@ export const MATERIALS_DATA = {
 
 export const BRANDS_DATA = [
   {
+    name: 'GROHE',
+    tagline: 'German Engineering & Premium Brassware',
+    origin: 'Germany',
+    description: 'World-leading provider of sanitary fittings, thermostatic showers, and smart water management.',
+    logoText: 'GROHE'
+  },
+  {
+    name: 'GEBERIT',
+    tagline: 'Concealed Flushing Systems & Sanitaryware',
+    origin: 'Switzerland',
+    description: 'European leader in sanitary products, concealed cisterns, and rimless hygiene technology.',
+    logoText: 'GEBERIT'
+  },
+  {
+    name: 'JAGUAR',
+    tagline: 'Complete Bathroom & Showering Solutions',
+    origin: 'Global Excellence',
+    description: 'High-performance faucets, thermostatic shower systems, wellness, and sanitaryware.',
+    logoText: 'JAGUAR'
+  },
+  {
+    name: 'RAK CERAMICS',
+    tagline: 'World Leading Porcelain Slabs & Ceramics',
+    origin: 'UAE • Global',
+    description: 'One of the largest ceramic brands in the world, specializing in large format porcelain slabs and sanitaryware.',
+    logoText: 'RAK CERAMICS'
+  },
+  {
     name: 'BAGNODESIGN',
-    tagline: 'Luxury Sanitaryware & Brassware',
+    tagline: 'Luxury Italian & UK Sanitaryware',
     origin: 'London • Milan',
     description: 'Premier Italian and UK engineered mixers, sanitaryware, and Bagnospa wellness systems.',
     logoText: 'BAGNODESIGN'
-  },
-  {
-    name: 'AQUAECO',
-    tagline: 'Water Conservation & Touchless Solutions',
-    origin: 'European Standards',
-    description: 'WRAS and ESMA certified electronic sensor taps, aerators, and water management technology.',
-    logoText: 'AQUAECO'
   },
   {
     name: 'SANIPEX GROUP',
@@ -230,6 +255,13 @@ export const BRANDS_DATA = [
     origin: 'Dubai • Worldwide',
     description: 'Global leader in large-format porcelain slabs, outdoor lounge collections, and surface tiles.',
     logoText: 'SANIPEX GROUP'
+  },
+  {
+    name: 'AQUAECO',
+    tagline: 'Water Conservation & Touchless Solutions',
+    origin: 'European Standards',
+    description: 'WRAS and ESMA certified electronic sensor taps, aerators, and water management technology.',
+    logoText: 'AQUAECO'
   },
   {
     name: 'BYSTRO',
@@ -240,7 +272,7 @@ export const BRANDS_DATA = [
   },
   {
     name: 'HEWI',
-    tagline: 'German Engineering & Supportive Hardware',
+    tagline: 'German Supportive & Accessible Hardware',
     origin: 'Made in Germany',
     description: 'Award-winning accessible sanitaryware, supportive rails, and hardware compatible with Ginza Junior.',
     logoText: 'HEWI'

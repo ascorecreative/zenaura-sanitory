@@ -26,7 +26,7 @@ export default function Footer() {
             </a>
 
             <p className="text-xs text-white/80 leading-relaxed max-w-sm font-medium">
-              Official supplier and project partner for the MEA 2026 BAGNODESIGN and SANIPEX GROUP catalog. Delivering luxury mixers, Bagnospa shower systems, custom vanities, and architectural porcelain slabs across the UAE & GCC.
+              Official supplier and project partner for GROHE, GEBERIT, JAGUAR, RAK CERAMICS, BAGNODESIGN and SANIPEX GROUP portfolios. Delivering luxury mixers, shower systems, custom vanities, and architectural porcelain slabs across the UAE & GCC.
             </p>
 
             {/* Certifications Row */}
@@ -61,7 +61,7 @@ export default function Footer() {
                 <a href="#hero" className="hover:text-[#D4AF37] transition-colors">Home & Overview</a>
               </li>
               <li>
-                <a href="#collections" className="hover:text-[#D4AF37] transition-colors">Featured MEA 2026 Collections</a>
+                <a href="#collections" className="hover:text-[#D4AF37] transition-colors">Featured Design Collections</a>
               </li>
               <li>
                 <a href="#categories" className="hover:text-[#D4AF37] transition-colors">Product Categories & Specifications</a>
@@ -90,14 +90,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <a href="tel:+971547834673" className="hover:text-[#D4AF37] transition-colors font-bold text-white">
-                  +971 54 783 4673
+                <a href="tel:+971541414160" className="hover:text-[#D4AF37] transition-colors font-bold text-white">
+                  +971 54 141 4160
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <a href="mailto:zenauratrading@outlook.com" className="hover:text-[#D4AF37] transition-colors">
-                  zenauratrading@outlook.com
+                <a href="mailto:info@zenauratrading.com" className="hover:text-[#D4AF37] transition-colors">
+                  info@zenauratrading.com
                 </a>
               </div>
             </div>

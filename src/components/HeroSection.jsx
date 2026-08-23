@@ -214,8 +214,8 @@ export default function HeroSection({ onRequestCatalogue, onOpenInquiry }) {
                 <Award className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs font-bold text-white uppercase tracking-wider">Official MEA 2026 Portfolio</p>
-                <p className="text-[11px] text-white/60 font-medium">5,000+ European & Italian Crafted Items</p>
+                <p className="text-xs font-bold text-white uppercase tracking-wider">Global Partner Brands Portfolio</p>
+                <p className="text-[11px] text-white/60 font-medium">GROHE • GEBERIT • JAGUAR • RAK CERAMICS</p>
               </div>
             </div>
 

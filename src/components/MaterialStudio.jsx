@@ -27,7 +27,7 @@ export default function MaterialStudio() {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
           <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#203A30] px-3.5 py-1 rounded-full bg-[#E8EFEB] border border-[#203A30]/20 inline-flex items-center gap-1.5">
             <Palette className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span>Catalogue Page 12 Swatches Board</span>
+            <span>Catalogue Finishes & Swatches Board</span>
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-[#203A30] font-light">
             Finish & Material Studio
@@ -82,7 +82,7 @@ export default function MaterialStudio() {
             <div className="flex items-center justify-between border-b border-[#203A30]/10 pb-4">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] block">
-                  Official MEA 2026 BAGNODESIGN Page 12
+                  Official Brand Partner Palette
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#203A30]">
                   Complete Catalogue Swatch Palette
@@ -96,7 +96,7 @@ export default function MaterialStudio() {
             <div className="relative rounded-2xl overflow-hidden bg-white border border-[#203A30]/15 p-4 shadow-inner max-w-4xl mx-auto">
               <img
                 src="/images/catalog_finishes_page12.jpg"
-                alt="BAGNODESIGN Official Catalogue Page 12 Finishes Swatches"
+                alt="Official Catalogue Finishes Swatches"
                 className="w-full h-auto object-contain rounded-xl"
               />
             </div>
@@ -191,7 +191,7 @@ export default function MaterialStudio() {
 
               {/* Direct Inquiry CTA */}
               <a
-                href={`https://wa.me/971547834673?text=Hello%20Zenaura%20Sanitary,%20I%20am%20interested%20in%20specifying%20the%20${encodeURIComponent(selectedSwatch.name)}%20(${selectedSwatch.code})%20finish%20for%20my%20project.`}
+                href={`https://wa.me/9715414160?text=Hello%20Zenaura%20Sanitary,%20I%20am%20interested%20in%20specifying%20the%20${encodeURIComponent(selectedSwatch.name)}%20(${selectedSwatch.code})%20finish%20for%20my%20project.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl bg-[#203A30] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#2D4F42] transition-colors duration-300 shadow-md flex items-center justify-center gap-2"

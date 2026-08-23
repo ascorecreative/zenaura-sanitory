@@ -24,7 +24,7 @@ export default function CollectionMatrix({ onSelectCollection }) {
             Key Collection Matrix
           </h2>
           <p className="text-xs sm:text-base text-[#2D3748] font-normal leading-relaxed max-w-2xl mx-auto">
-            Explore signature designer collections from the MEA 2026 BAGNODESIGN portfolio, masterfully blending heritage craftsmanship with contemporary ergonomics.
+            Explore signature designer collections from our official brand portfolio, masterfully blending heritage craftsmanship with contemporary ergonomics.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function CollectionMatrix({ onSelectCollection }) {
               {/* Card Body */}
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
                 <div className="space-y-2 sm:space-y-3">
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#203A30] group-hover:text-[#C8A97E] transition-colors">
+                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#203A30] group-hover:text-[#D4AF37] transition-colors">
                     {col.name}
                   </h3>
                   <p className="text-[11px] sm:text-xs font-semibold text-[#203A30]/80 uppercase tracking-wider">
@@ -84,7 +84,7 @@ export default function CollectionMatrix({ onSelectCollection }) {
                 <div className="space-y-2 pt-2 border-t border-[#203A30]/10">
                   {col.features.map((feat, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#C8A97E] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
                       <span className="text-[11px] text-[#1A202C] font-semibold leading-tight">
                         {feat}
                       </span>
@@ -98,7 +98,7 @@ export default function CollectionMatrix({ onSelectCollection }) {
                   className="w-full mt-3 sm:mt-4 py-3 rounded-xl bg-white text-[#203A30] border border-[#203A30]/40 hover:bg-[#203A30] hover:text-white transition-all duration-300 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 group/btn"
                 >
                   <span>Inquire Collection</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#C8A97E] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />
                 </button>
               </div>
             </div>

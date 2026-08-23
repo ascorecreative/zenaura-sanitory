@@ -42,8 +42,8 @@ export default function ShowroomContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Direct Phone & WhatsApp Inquiry</h4>
-                  <a href="tel:+971547834673" className="block text-sm font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
-                    +971 54 783 4673
+                  <a href="tel:+971541414160" className="block text-sm font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
+                    +971 54 141 4160
                   </a>
                   <p className="text-[10px] text-[#2D3748] font-medium">Instant Project Specification Assistance</p>
                 </div>
@@ -56,8 +56,8 @@ export default function ShowroomContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Official Email Inquiry</h4>
-                  <a href="mailto:zenauratrading@outlook.com" className="block text-xs font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
-                    zenauratrading@outlook.com
+                  <a href="mailto:info@zenauratrading.com" className="block text-xs font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
+                    info@zenauratrading.com
                   </a>
                 </div>
               </div>
@@ -79,13 +79,13 @@ export default function ShowroomContact() {
             {/* Quick Action Button */}
             <div className="pt-4 border-t border-[#203A30]/10">
               <a
-                href="https://wa.me/971547834673?text=Hello%20Zenaura%20Sanitary,%20I%20would%20like%20to%20inquire%20about%20catalog%20pricing%20and%20product%20specifications."
+                href="https://wa.me/971541414160?text=Hello%20Zenaura%20Sanitary,%20I%20would%20like%20to%20inquire%20about%20catalog%20pricing%20and%20product%20specifications."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 px-4 rounded-full bg-[#203A30] text-white hover:bg-[#2D4F42] transition-colors duration-300 shadow-md text-[11px] sm:text-xs font-bold uppercase tracking-[0.06em] flex items-center justify-center gap-2.5 text-center leading-tight group"
               >
                 <MessageSquare className="w-4 h-4 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
-                <span>Start Direct WhatsApp Chat (+971 54 783 4673)</span>
+                <span>Start Direct WhatsApp Chat (+971 54 141 4160)</span>
               </a>
             </div>
 
@@ -108,7 +108,7 @@ export default function ShowroomContact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <a 
-                href="https://wa.me/971547834673?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Bathroom%20Sanitary%20Ware."
+                href="https://wa.me/971541414160?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Bathroom%20Sanitary%20Ware."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-2xl bg-[#F4F6F5] hover:bg-[#E8EFEB] border border-[#203A30]/15 transition-all text-[#203A30] font-bold flex items-center justify-between"
@@ -118,7 +118,7 @@ export default function ShowroomContact() {
               </a>
 
               <a 
-                href="https://wa.me/971547834673?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Architectural%20Tiles%20%26%20Slabs."
+                href="https://wa.me/971541414160?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Architectural%20Tiles%20%26%20Slabs."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-2xl bg-[#F4F6F5] hover:bg-[#E8EFEB] border border-[#203A30]/15 transition-all text-[#203A30] font-bold flex items-center justify-between"
@@ -128,7 +128,7 @@ export default function ShowroomContact() {
               </a>
 
               <a 
-                href="https://wa.me/971547834673?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Kitchen%20Fittings%20%26%20Sinks."
+                href="https://wa.me/971541414160?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Kitchen%20Fittings%20%26%20Sinks."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-2xl bg-[#F4F6F5] hover:bg-[#E8EFEB] border border-[#203A30]/15 transition-all text-[#203A30] font-bold flex items-center justify-between"
@@ -138,7 +138,7 @@ export default function ShowroomContact() {
               </a>
 
               <a 
-                href="https://wa.me/971547834673?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Outdoor%20Living%20Furniture."
+                href="https://wa.me/971541414160?text=Hello,%20I%20want%20to%20request%20samples%20and%20pricing%20for%20Outdoor%20Living%20Furniture."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-2xl bg-[#F4F6F5] hover:bg-[#E8EFEB] border border-[#203A30]/15 transition-all text-[#203A30] font-bold flex items-center justify-between"
@@ -150,7 +150,7 @@ export default function ShowroomContact() {
 
             <div className="p-4 rounded-2xl bg-[#203A30] text-white text-xs space-y-1">
               <p className="font-bold text-[#D4AF37]">Need assistance with project BOQ specifications?</p>
-              <p className="text-white/80">Send your drawings or product codes directly to zenauratrading@outlook.com or WhatsApp.</p>
+              <p className="text-white/80">Send your drawings or product codes directly to info@zenauratrading.com or WhatsApp.</p>
             </div>
           </div>
 
