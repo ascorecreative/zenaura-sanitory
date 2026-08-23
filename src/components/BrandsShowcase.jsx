@@ -17,11 +17,11 @@ export default function BrandsShowcase({ onOpenInquiry }) {
           </div>
 
           <h2 className="font-serif text-3xl sm:text-5xl font-light text-[#203A30]">
-            Curated European <span className="italic font-normal text-[#203A30]">Brand Portfolio</span>
+            Global <span className="italic font-normal text-[#203A30]">Brand Portfolio</span>
           </h2>
           
           <p className="text-[#2D3748] text-sm sm:text-base leading-relaxed font-normal">
-            Representing world-leading architectural manufacturers in a single unified showcase, engineered for residential luxury and high-traffic commercial projects.
+            Representing world-leading architectural manufacturers—including GROHE, GEBERIT, JAGUAR, and RAK CERAMICS—in a single unified showcase.
           </p>
         </div>
 
@@ -37,9 +37,19 @@ export default function BrandsShowcase({ onOpenInquiry }) {
 
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center justify-between">
-                  <div className="px-3.5 py-1 rounded-md bg-[#203A30] text-white font-serif font-bold text-sm tracking-wider shadow-sm">
-                    {brand.logoText}
-                  </div>
+                  {brand.logoImage ? (
+                    <div className="h-10 px-3 py-1 bg-gray-50 rounded-lg border border-[#203A30]/10 flex items-center justify-center">
+                      <img 
+                        src={brand.logoImage} 
+                        alt={brand.name} 
+                        className="h-full w-auto object-contain max-w-[120px]"
+                      />
+                    </div>
+                  ) : (
+                    <div className="px-3.5 py-1 rounded-md bg-[#203A30] text-white font-serif font-bold text-sm tracking-wider shadow-sm">
+                      {brand.logoText}
+                    </div>
+                  )}
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#203A30]/70 bg-[#F0F3F7] px-2.5 py-1 rounded-md border border-[#203A30]/10">
                     {brand.origin}
                   </span>

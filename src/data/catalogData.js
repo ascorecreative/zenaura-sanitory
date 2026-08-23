@@ -18,7 +18,7 @@ export const COLLECTIONS_DATA = [
   {
     id: 'fonteyn',
     name: 'Fonteyn Collection',
-    tagline: 'Mid-Century Curves & Sculptural Refinement',
+    tagline: 'Graceful Curves & Sculptural Refinement',
     category: 'Mid-Century',
     image: '/images/addon/image3.png',
     secondaryImage: '/images/addon/image4.png',
@@ -64,34 +64,36 @@ export const COLLECTIONS_DATA = [
     badge: 'Murano Artisanal'
   },
   {
-    id: 'studio316',
-    name: 'Studio 316 & Beach House',
-    tagline: 'Marine-Grade 316 Stainless Steel Outdoor & Spa Columns',
-    category: 'Industrial Chic',
-    image: '/images/addon/image9.png',
+    id: 'european-luxury',
+    name: 'European Luxury Bathrooms',
+    tagline: 'Sanipex Group Contemporary Architecture',
+    category: 'Hotel Luxe',
+    image: '/images/addon/image11.png',
+    secondaryImage: '/images/addon/image9.png',
     features: [
-      'AISI 316L Marine Grade Stainless Steel construction',
-      'Corrosion & salt-air resistant brushed finish',
-      'Integrated foot-wash & thermostatic mixer valves',
-      'Freestanding resort poolside & beachfront installation'
+      'Contemporary European sanitary architecture',
+      'Ergonomic mixers and luxury shower columns',
+      'Integrated floating vanities and stone basins',
+      'High-traffic commercial and residential durability'
     ],
-    description: 'Engineered specifically for coastal Middle Eastern environments, Studio 316 delivers ultra-durable outdoor showers and spa elements with minimal maintenance requirements.',
-    badge: 'Marine Grade 316'
+    description: 'Curated luxury European bathroom solutions showcasing premium brassware, sculptural ceramics, and architectural finishes from Sanipex Group.',
+    badge: 'European Luxury'
   },
   {
-    id: 'toko',
-    name: 'Toko Flavours & Toko Groove',
-    tagline: 'Color-Rich Armour Coatings & 70s Fluted Textures',
-    category: 'Mid-Century',
-    image: '/images/addon/image10.png',
+    id: 'italian-surfaces',
+    name: 'Italian Artisanal Surfaces',
+    tagline: 'Bespoke Italian Craftsmanship & Finishes',
+    category: 'Featured',
+    image: '/images/addon/image17.png',
+    secondaryImage: '/images/addon/image18.png',
     features: [
-      'Retro 70s vertical fluted vanity front panels',
-      'Armour Cocoa & Truffle matte tactile coatings',
-      'Anti-fingerprint thermal repair nanotech',
-      'Modular floating and floor-standing configurations'
+      'Precision Italian engineered fittings',
+      'Opulent marble veining and tile surfaces',
+      'PVD Gold, Oyster & Soft Bronze metallic swatches',
+      'Bespoke architectural statement pieces'
     ],
-    description: 'Toko brings warmth and tactile depth through rich earthy Armour coatings and architectural linear fluting, setting the trend for modern luxury residential bathrooms.',
-    badge: 'Architectural Fluted'
+    description: 'Refined Italian bathroom design statements featuring precision-engineered mixers, bespoke vanities, and opulent surface materials.',
+    badge: 'Italian Craftsmanship'
   }
 ];
 
@@ -101,7 +103,7 @@ export const CATEGORIES_DATA = [
     title: 'Bathroom',
     subtitle: 'Taps, Basins, Furniture, WC, Bidet & Flushing',
     icon: 'Droplets',
-    image: '/images/addon/image5.png',
+    image: '/images/addon/image1.png',
     items: [
       'Taps (Basin Mixers, Wall Faucets, Bath Fillers)',
       'Basin (Countertop Vessel Bowls, Pedestals, Integrated)',
@@ -121,7 +123,7 @@ export const CATEGORIES_DATA = [
     title: 'Tiles',
     subtitle: 'Standard Format, Outdoor Tiles & Small Format',
     icon: 'Layers',
-    image: '/images/addon/image3.png',
+    image: '/images/addon/image18.png',
     items: [
       'Standard Format Tiles (Wall & Floor Porcelain)',
       'Outdoor Tiles (R11 Anti-Slip Terrace & Poolside)',
@@ -138,7 +140,7 @@ export const CATEGORIES_DATA = [
     title: 'Kitchen Appliance',
     subtitle: 'Sink, Taps, Refrigerators & Freezers',
     icon: 'Box',
-    image: '/images/kitchen.png',
+    image: '/images/sanipex_slides/slide2_outdoor_kitchen.webp',
     items: [
       'Kitchen Sink (IX304 Stainless Steel & Ceramic)',
       'Kitchen Taps (Commercial Pull-Out Spray & Pot Fillers)',
@@ -155,7 +157,7 @@ export const CATEGORIES_DATA = [
     title: 'Outdoor Living',
     subtitle: 'Sunbed, Poolbed & Sofa Set',
     icon: 'Sparkles',
-    image: '/images/cat_outdoor.png',
+    image: '/images/sanipex_slides/slide3_pergola.webp',
     items: [
       'Sunbed (Teak Wood & Aluminium Loungers)',
       'Poolbed (Weatherproof Cushion Daybeds)',
@@ -172,7 +174,7 @@ export const CATEGORIES_DATA = [
     title: 'Slabs',
     subtitle: 'Indoor & Outdoor Architectural Slabs',
     icon: 'ShowerHead',
-    image: '/images/cat_slabs.png',
+    image: '/images/sanipex_slides/slide4_slabs.webp',
     items: [
       'Indoor Slabs (120x280cm Calacatta & Travertine Slabs)',
       'Outdoor Slabs (20mm Heavy Duty Patio Porcelain Slabs)'
@@ -194,7 +196,7 @@ export const MATERIALS_DATA = {
     { name: 'PVD Soft Burgundy', hex: '#6B3E44', texture: 'Satin Deep Velvet Burgundy', code: 'PVD-BUR-05' }
   ],
   timelessClassics: [
-    { name: 'Matt Black', hex: '#1C1D21', texture: 'Ultra-Matte Architectural Obsidian', code: 'CLS-[#1C1D21]-01' },
+    { name: 'Matt Black', hex: '#1C1D21', texture: 'Ultra-Matte Architectural Obsidian', code: 'CLS-BLK-01' },
     { name: 'Brushed Nickel', hex: '#A3A39F', texture: 'Silky Fine Brushed Steel', code: 'CLS-NCK-02' },
     { name: 'Chrome', hex: '#E5E7EB', texture: 'Mirror Polished Pure Chrome', code: 'CLS-CHM-03' },
     { name: 'Gold', hex: '#E6C657', texture: 'Rich Warm Polished Gold', code: 'CLS-GLD-04' },
@@ -219,28 +221,32 @@ export const BRANDS_DATA = [
     tagline: 'German Engineering & Premium Brassware',
     origin: 'Germany',
     description: 'World-leading provider of sanitary fittings, thermostatic showers, and smart water management.',
-    logoText: 'GROHE'
+    logoText: 'GROHE',
+    logoImage: '/images/addon/image13.png'
   },
   {
     name: 'GEBERIT',
     tagline: 'Concealed Flushing Systems & Sanitaryware',
     origin: 'Switzerland',
     description: 'European leader in sanitary products, concealed cisterns, and rimless hygiene technology.',
-    logoText: 'GEBERIT'
+    logoText: 'GEBERIT',
+    logoImage: '/images/addon/image16.png'
   },
   {
     name: 'JAGUAR',
     tagline: 'Complete Bathroom & Showering Solutions',
     origin: 'Global Excellence',
     description: 'High-performance faucets, thermostatic shower systems, wellness, and sanitaryware.',
-    logoText: 'JAGUAR'
+    logoText: 'JAGUAR',
+    logoImage: '/images/addon/image14.png'
   },
   {
     name: 'RAK CERAMICS',
     tagline: 'World Leading Porcelain Slabs & Ceramics',
     origin: 'UAE • Global',
     description: 'One of the largest ceramic brands in the world, specializing in large format porcelain slabs and sanitaryware.',
-    logoText: 'RAK CERAMICS'
+    logoText: 'RAK CERAMICS',
+    logoImage: '/images/addon/image15.png'
   },
   {
     name: 'BAGNODESIGN',
