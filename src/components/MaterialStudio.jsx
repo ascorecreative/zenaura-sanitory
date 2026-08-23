@@ -129,12 +129,24 @@ export default function MaterialStudio() {
                           : 'bg-[#F4F6F5]/60 border-[#203A30]/15 hover:bg-white hover:border-[#203A30]/50'
                       }`}
                     >
-                      <div
-                        className="w-12 h-12 rounded-full shadow-md border border-black/20 relative flex items-center justify-center transition-transform group-hover:scale-110 overflow-hidden"
-                        style={{ background: swatch.gradient || swatch.hex }}
-                      >
-                        {isSelected && <Check className="w-5 h-5 text-white drop-shadow-lg" />}
+                      {/* Exact Cropped Circular Swatch Image from Catalog Sheet */}
+                      <div className="w-14 h-14 rounded-full shadow-md border-2 border-black/15 relative flex items-center justify-center transition-transform group-hover:scale-110 overflow-hidden bg-gray-100">
+                        {swatch.swatchImage ? (
+                          <img 
+                            src={swatch.swatchImage} 
+                            alt={swatch.name} 
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full" style={{ backgroundColor: swatch.hex }} />
+                        )}
+                        {isSelected && (
+                          <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px] flex items-center justify-center">
+                            <Check className="w-6 h-6 text-white drop-shadow-lg" />
+                          </div>
+                        )}
                       </div>
+
                       <div className="text-center w-full">
                         <p className="text-xs font-bold text-[#203A30] truncate">{swatch.name}</p>
                         <p className="text-[10px] text-[#203A30]/80 font-bold uppercase tracking-wider">{swatch.code}</p>
@@ -163,15 +175,24 @@ export default function MaterialStudio() {
                 </p>
               </div>
 
-              {/* Color Swatch Big Circle Display with Realistic Metallic Gradient */}
-              <div 
-                className="relative rounded-2xl h-44 shadow-lg border border-black/20 p-6 flex flex-col justify-between overflow-hidden" 
-                style={{ background: selectedSwatch.gradient || selectedSwatch.hex }}
-              >
-                <div className="bg-[#203A30]/90 backdrop-blur-md text-white text-[10px] font-mono px-3 py-1 rounded-md self-start border border-white/20 font-bold">
+              {/* Big Circle Preview with Exact Cropped Swatch Image */}
+              <div className="relative rounded-2xl h-48 shadow-lg border border-black/20 p-6 flex flex-col justify-between overflow-hidden bg-[#F4F6F5]">
+                {selectedSwatch.swatchImage ? (
+                  <div className="absolute inset-0 flex items-center justify-center p-2">
+                    <img 
+                      src={selectedSwatch.swatchImage} 
+                      alt={selectedSwatch.name} 
+                      className="h-full w-auto object-contain rounded-full shadow-md"
+                    />
+                  </div>
+                ) : (
+                  <div className="absolute inset-0" style={{ backgroundColor: selectedSwatch.hex }} />
+                )}
+
+                <div className="relative z-10 bg-[#203A30]/90 backdrop-blur-md text-white text-[10px] font-mono px-3 py-1 rounded-md self-start border border-white/20 font-bold">
                   HEX: {selectedSwatch.hex}
                 </div>
-                <div className="bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl text-[#203A30] border border-white self-end text-xs font-bold shadow-md">
+                <div className="relative z-10 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl text-[#203A30] border border-white self-end text-xs font-bold shadow-md">
                   {selectedSwatch.code}
                 </div>
               </div>
