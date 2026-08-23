@@ -96,8 +96,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <a href="mailto:info@zenauratrading.com" className="hover:text-[#D4AF37] transition-colors">
-                  info@zenauratrading.com
+                <a href="mailto:info@zenaurasanitary.com" className="hover:text-[#D4AF37] transition-colors font-bold">
+                  info@zenaurasanitary.com
                 </a>
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function Footer() {
         {/* Bottom Copyright Bar with Clean Developed by Ascore Creative link */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70 font-medium">
           <p>
-            © 2026 Zenaura Trading. All Rights Reserved. Designed by{' '}
+            © 2026 Zenaura Sanitary. All Rights Reserved. Designed by{' '}
             <a 
               href="https://www.ascore.ae" 
               target="_blank" 

@@ -190,29 +190,143 @@ export const CATEGORIES_DATA = [
 
 export const MATERIALS_DATA = {
   warmTones: [
-    { name: 'Chrome', hex: '#E5E7EB', texture: 'Polished Stainless Steel / Brushed Chrome', code: 'FIN-CHM-01' },
-    { name: 'Inox / Brushed Nickel', hex: '#B5B09C', texture: 'Brushed Inox / Satin Nickel / Platinum Matt', code: 'FIN-INX-02' },
-    { name: 'PVD Brushed Gold', hex: '#D1A751', texture: 'PVD Gold Brushed Satin / Matt Gold / Durabrass', code: 'FIN-GLD-03' },
-    { name: 'PVD Miele / Oyster', hex: '#EAD5A7', texture: 'PVD Oyster / Satin Gold / Champagne Soft Gold', code: 'FIN-OYS-04' },
-    { name: 'PVD Gold', hex: '#E5C544', texture: 'Polished Gold / Polished Brass', code: 'FIN-GLD-05' }
+    { 
+      name: 'Chrome', 
+      hex: '#E5E7EB', 
+      gradient: 'linear-gradient(135deg, #f5f7fa 0%, #c5cbd3 50%, #ffffff 100%)', 
+      texture: 'Polished Stainless Steel / Brushed Chrome', 
+      code: 'FIN-CHM-01' 
+    },
+    { 
+      name: 'Inox / Brushed Nickel', 
+      hex: '#B5B09C', 
+      gradient: 'linear-gradient(135deg, #d8d2c4 0%, #a49e8e 50%, #c9c3b4 100%)', 
+      texture: 'Brushed Inox / Satin Nickel / Platinum Matt', 
+      code: 'FIN-INX-02' 
+    },
+    { 
+      name: 'PVD Brushed Gold', 
+      hex: '#D1A751', 
+      gradient: 'linear-gradient(135deg, #fada87 0%, #ba903b 50%, #e0b853 100%)', 
+      texture: 'PVD Gold Brushed Satin / Matt Gold / Durabrass', 
+      code: 'FIN-GLD-03' 
+    },
+    { 
+      name: 'PVD Miele / Oyster', 
+      hex: '#EAD5A7', 
+      gradient: 'linear-gradient(135deg, #faebd0 0%, #dbbf84 50%, #f5e4b8 100%)', 
+      texture: 'PVD Oyster / Satin Gold / Champagne Soft Gold', 
+      code: 'FIN-OYS-04' 
+    },
+    { 
+      name: 'PVD Gold', 
+      hex: '#E5C544', 
+      gradient: 'linear-gradient(135deg, #ffee80 0%, #c7a41c 50%, #f5d438 100%)', 
+      texture: 'Polished Gold / Polished Brass', 
+      code: 'FIN-GLD-05' 
+    }
   ],
   timelessClassics: [
-    { name: 'Velvet Black', hex: '#121212', texture: 'Matt Black / Structured / Hammercoated Black', code: 'FIN-BLK-01' },
-    { name: 'Red Canyon / Santiago', hex: '#A46E56', texture: 'PVD Santiago / PVD Red Gold / PVD Copper', code: 'FIN-STG-02' },
-    { name: 'Soft Bronze', hex: '#786447', texture: 'Matt Bronze / Brushed Bronze / Tuscany Bronze', code: 'FIN-BRZ-03' },
-    { name: 'Brushed Stainless Steel', hex: '#D4D8DF', texture: 'Satin Stainless Steel / AISI 304', code: 'FIN-[#D4D8DF]-04' },
-    { name: 'Anthracite', hex: '#4D5054', texture: 'PVD Brushed Black / Gun Metal / Satin Graphite', code: 'FIN-[#4D5054]-05' }
+    { 
+      name: 'Velvet Black', 
+      hex: '#121212', 
+      gradient: 'linear-gradient(135deg, #2c2d33 0%, #0d0d0f 60%, #1a1a1d 100%)', 
+      texture: 'Matt Black / Structured / Hammercoated Black', 
+      code: 'FIN-BLK-01' 
+    },
+    { 
+      name: 'Red Canyon / Santiago', 
+      hex: '#A46E56', 
+      gradient: 'linear-gradient(135deg, #c7896e 0%, #8c533c 50%, #b5775d 100%)', 
+      texture: 'PVD Santiago / PVD Red Gold / PVD Copper', 
+      code: 'FIN-STG-02' 
+    },
+    { 
+      name: 'Soft Bronze', 
+      hex: '#786447', 
+      gradient: 'linear-gradient(135deg, #99825e 0%, #5e4c33 50%, #826d4c 100%)', 
+      texture: 'Matt Bronze / Brushed Bronze / Tuscany Bronze', 
+      code: 'FIN-BRZ-03' 
+    },
+    { 
+      name: 'Brushed Stainless Steel', 
+      hex: '#D4D8DF', 
+      gradient: 'linear-gradient(135deg, #f2f4f8 0%, #b0b8c4 50%, #dede0 100%)', 
+      texture: 'Satin Stainless Steel / AISI 304', 
+      code: 'FIN-[#D4D8DF]-04' 
+    },
+    { 
+      name: 'Anthracite', 
+      hex: '#4D5054', 
+      gradient: 'linear-gradient(135deg, #6e7278 0%, #35373a 50%, #565a60 100%)', 
+      texture: 'PVD Brushed Black / Gun Metal / Satin Graphite', 
+      code: 'FIN-[#4D5054]-05' 
+    }
   ],
   armourCollection: [
-    { name: 'Soft Burgundy', hex: '#8C584E', texture: 'Brushed Copper PVD / PVD Bronze / Red Gold', code: 'ARM-BUR-01' },
-    { name: 'Armour Cocoa', hex: '#4A3B32', texture: 'Matte Tactile Warm Earth Coating', code: 'ARM-CCA-02' },
-    { name: 'Armour Truffle', hex: '#6B5E55', texture: 'Deep Greige Velvet Touch Coating', code: 'ARM-TRF-03' },
-    { name: 'Armour Blueberry', hex: '#2A364F', texture: 'Deep Midnight Matte Blue Coating', code: 'ARM-BLU-04' },
-    { name: 'Armour Mandarin', hex: '#C85A32', texture: 'Terracotta Sunset Matte Coating', code: 'ARM-MND-05' },
-    { name: 'Armour Lip Gloss', hex: '#A83B4C', texture: 'Satin Crimson Accent Coating', code: 'ARM-LIP-06' },
-    { name: 'Armour Sage', hex: '#7A8B7B', texture: 'Calming Botanical Olive Green Coating', code: 'ARM-SGE-07' },
-    { name: 'Armour Baby Pink', hex: '#E8C5C8', texture: 'Soft Architectural Blush Coating', code: 'ARM-PNK-08' },
-    { name: 'Armour Misty Grey', hex: '#B8BCBF', texture: 'Neutral Concrete Soft Smoke Coating', code: 'ARM-GRY-09' }
+    { 
+      name: 'Soft Burgundy', 
+      hex: '#8C584E', 
+      gradient: 'linear-gradient(135deg, #a86f64 0%, #6e3a32 50%, #945348 100%)', 
+      texture: 'Brushed Copper PVD / PVD Bronze / Red Gold', 
+      code: 'ARM-BUR-01' 
+    },
+    { 
+      name: 'Armour Cocoa', 
+      hex: '#4A3B32', 
+      gradient: 'linear-gradient(135deg, #614f44 0%, #362921 50%, #524238 100%)', 
+      texture: 'Matte Tactile Warm Earth Coating', 
+      code: 'ARM-CCA-02' 
+    },
+    { 
+      name: 'Armour Truffle', 
+      hex: '#6B5E55', 
+      gradient: 'linear-gradient(135deg, #87786e 0%, #52463e 50%, #75675d 100%)', 
+      texture: 'Deep Greige Velvet Touch Coating', 
+      code: 'ARM-TRF-03' 
+    },
+    { 
+      name: 'Armour Blueberry', 
+      hex: '#2A364F', 
+      gradient: 'linear-gradient(135deg, #3f4e6e 0%, #1c2538 50%, #313f5c 100%)', 
+      texture: 'Deep Midnight Matte Blue Coating', 
+      code: 'ARM-BLU-04' 
+    },
+    { 
+      name: 'Armour Mandarin', 
+      hex: '#C85A32', 
+      gradient: 'linear-gradient(135deg, #e0734a 0%, #a6421c 50%, #d16239 100%)', 
+      texture: 'Terracotta Sunset Matte Coating', 
+      code: 'ARM-MND-05' 
+    },
+    { 
+      name: 'Armour Lip Gloss', 
+      hex: '#A83B4C', 
+      gradient: 'linear-gradient(135deg, #c45466 0%, #872535 50%, #b34254 100%)', 
+      texture: 'Satin Crimson Accent Coating', 
+      code: 'ARM-LIP-06' 
+    },
+    { 
+      name: 'Armour Sage', 
+      hex: '#7A8B7B', 
+      gradient: 'linear-gradient(135deg, #95a896 0%, #607061 50%, #839484 100%)', 
+      texture: 'Calming Botanical Olive Green Coating', 
+      code: 'ARM-SGE-07' 
+    },
+    { 
+      name: 'Armour Baby Pink', 
+      hex: '#E8C5C8', 
+      gradient: 'linear-gradient(135deg, #f7dcdb 0%, #d9b0b4 50%, #edd3d5 100%)', 
+      texture: 'Soft Architectural Blush Coating', 
+      code: 'ARM-PNK-08' 
+    },
+    { 
+      name: 'Armour Misty Grey', 
+      hex: '#B8BCBF', 
+      gradient: 'linear-gradient(135deg, #d2d6d9 0%, #9ca0a3 50%, #c4c8cb 100%)', 
+      texture: 'Neutral Concrete Soft Smoke Coating', 
+      code: 'ARM-GRY-09' 
+    }
   ]
 };
 
@@ -254,41 +368,47 @@ export const BRANDS_DATA = [
     tagline: 'Luxury Italian & UK Sanitaryware',
     origin: 'London • Milan',
     description: 'Premier Italian and UK engineered mixers, sanitaryware, and Bagnospa wellness systems.',
-    logoText: 'BAGNODESIGN'
+    logoText: 'BAGNODESIGN',
+    logoImage: '/images/logos/bagnodesign.svg'
   },
   {
     name: 'SANIPEX GROUP',
     tagline: 'Architectural Tiles, Slabs & Outdoor Living',
     origin: 'Dubai • Worldwide',
     description: 'Global leader in large-format porcelain slabs, outdoor lounge collections, and surface tiles.',
-    logoText: 'SANIPEX GROUP'
+    logoText: 'SANIPEX GROUP',
+    logoImage: '/images/logos/sanipex.svg'
   },
   {
     name: 'AQUAECO',
     tagline: 'Water Conservation & Touchless Solutions',
     origin: 'European Standards',
     description: 'WRAS and ESMA certified electronic sensor taps, aerators, and water management technology.',
-    logoText: 'AQUAECO'
+    logoText: 'AQUAECO',
+    logoImage: '/images/logos/aquaeco.svg'
   },
   {
     name: 'BYSTRO',
     tagline: 'Kitchen Appliances, Mixers & Sinks',
     origin: 'Commercial Kitchen Tech',
     description: 'Heavy-duty pull-out spray kitchen mixers, pot fillers, ovens, and IX304 stainless steel undermount sinks.',
-    logoText: 'BYSTRO'
+    logoText: 'BYSTRO',
+    logoImage: '/images/logos/bystro.svg'
   },
   {
     name: 'HEWI',
     tagline: 'German Supportive & Accessible Hardware',
     origin: 'Made in Germany',
     description: 'Award-winning accessible sanitaryware, supportive rails, and hardware compatible with Ginza Junior.',
-    logoText: 'HEWI'
+    logoText: 'HEWI',
+    logoImage: '/images/logos/hewi.svg'
   },
   {
     name: 'SANAURA',
     tagline: 'Spanish Alabaster Lighting & Luxury Mirrors',
     origin: 'Spain',
     description: 'Artisan hand-carved Spanish alabaster wall sconces and anti-fog backlit LED mirrors for Carlyle collection.',
-    logoText: 'SANAURA'
+    logoText: 'SANAURA',
+    logoImage: '/images/logos/sanaura.svg'
   }
 ];

@@ -130,10 +130,10 @@ export default function MaterialStudio() {
                       }`}
                     >
                       <div
-                        className="w-12 h-12 rounded-full shadow-inner border border-black/15 relative flex items-center justify-center transition-transform group-hover:scale-110"
-                        style={{ backgroundColor: swatch.hex }}
+                        className="w-12 h-12 rounded-full shadow-md border border-black/20 relative flex items-center justify-center transition-transform group-hover:scale-110 overflow-hidden"
+                        style={{ background: swatch.gradient || swatch.hex }}
                       >
-                        {isSelected && <Check className="w-5 h-5 text-white drop-shadow-md" />}
+                        {isSelected && <Check className="w-5 h-5 text-white drop-shadow-lg" />}
                       </div>
                       <div className="text-center w-full">
                         <p className="text-xs font-bold text-[#203A30] truncate">{swatch.name}</p>
@@ -163,8 +163,11 @@ export default function MaterialStudio() {
                 </p>
               </div>
 
-              {/* Color Swatch Big Circle Display */}
-              <div className="relative rounded-2xl h-44 shadow-inner border border-black/15 p-6 flex flex-col justify-between overflow-hidden" style={{ backgroundColor: selectedSwatch.hex }}>
+              {/* Color Swatch Big Circle Display with Realistic Metallic Gradient */}
+              <div 
+                className="relative rounded-2xl h-44 shadow-lg border border-black/20 p-6 flex flex-col justify-between overflow-hidden" 
+                style={{ background: selectedSwatch.gradient || selectedSwatch.hex }}
+              >
                 <div className="bg-[#203A30]/90 backdrop-blur-md text-white text-[10px] font-mono px-3 py-1 rounded-md self-start border border-white/20 font-bold">
                   HEX: {selectedSwatch.hex}
                 </div>

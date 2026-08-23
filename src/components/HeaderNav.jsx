@@ -38,11 +38,11 @@ export default function HeaderNav({ onRequestCatalogue, onOpenInquiry }) {
             </a>
             <span className="text-[#203A30]/30">|</span>
             <a 
-              href="mailto:info@zenauratrading.com" 
+              href="mailto:info@zenaurasanitary.com" 
               className="flex items-center gap-1.5 font-medium hover:text-[#D4AF37] transition-colors duration-200"
             >
               <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>info@zenauratrading.com</span>
+              <span>info@zenaurasanitary.com</span>
             </a>
           </div>
 

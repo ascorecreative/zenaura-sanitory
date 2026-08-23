@@ -12,7 +12,7 @@ export default function ShowroomContact() {
             Direct Consultation & Sales Support
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-[#203A30] font-light">
-            Connect with Zenaura Trading
+            Connect with Zenaura Sanitary
           </h2>
           <p className="text-xs sm:text-base text-[#2D3748] font-normal leading-relaxed">
             Our technical specialists provide end-to-end support for specification, finish matching, and catalog pricing inquiries.
@@ -56,8 +56,8 @@ export default function ShowroomContact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#203A30]">Official Email Inquiry</h4>
-                  <a href="mailto:info@zenauratrading.com" className="block text-xs font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
-                    info@zenauratrading.com
+                  <a href="mailto:info@zenaurasanitary.com" className="block text-xs font-bold text-[#203A30] hover:text-[#D4AF37] transition-colors mt-0.5">
+                    info@zenaurasanitary.com
                   </a>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function ShowroomContact() {
 
             <div className="p-4 rounded-2xl bg-[#203A30] text-white text-xs space-y-1">
               <p className="font-bold text-[#D4AF37]">Need assistance with project BOQ specifications?</p>
-              <p className="text-white/80">Send your drawings or product codes directly to info@zenauratrading.com or WhatsApp.</p>
+              <p className="text-white/80">Send your drawings or product codes directly to info@zenaurasanitary.com or WhatsApp.</p>
             </div>
           </div>
 
