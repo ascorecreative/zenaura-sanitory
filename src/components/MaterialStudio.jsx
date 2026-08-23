@@ -85,7 +85,7 @@ export default function MaterialStudio() {
                   Official Brand Partner Palette
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#203A30]">
-                  Complete Catalogue Swatch Palette
+                  Brand Finish Matrix (High-Res)
                 </h3>
               </div>
               <span className="text-xs font-bold text-[#203A30] bg-[#E8EFEB] px-3.5 py-1.5 rounded-full border border-[#203A30]/20">
@@ -93,10 +93,10 @@ export default function MaterialStudio() {
               </span>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden bg-white border border-[#203A30]/15 p-4 shadow-inner max-w-4xl mx-auto">
+            <div className="relative rounded-2xl overflow-hidden bg-white border border-[#203A30]/15 p-4 shadow-inner max-w-3xl mx-auto">
               <img
                 src="/images/catalog_finishes_page12.jpg"
-                alt="Official Catalogue Finishes Swatches"
+                alt="Official Catalogue Brand Finish Matrix"
                 className="w-full h-auto object-contain rounded-xl"
               />
             </div>
@@ -123,25 +123,25 @@ export default function MaterialStudio() {
                     <button
                       key={swatch.name}
                       onClick={() => setSelectedSwatch(swatch)}
-                      className={`p-3 rounded-2xl border text-left flex flex-col items-center justify-between gap-3 transition-all duration-300 ${
+                      className={`p-3.5 rounded-2xl border text-left flex flex-col items-center justify-between gap-3 transition-all duration-300 ${
                         isSelected
                           ? 'bg-white border-[#203A30] shadow-md scale-105 ring-2 ring-[#203A30]/40'
                           : 'bg-[#F4F6F5]/60 border-[#203A30]/15 hover:bg-white hover:border-[#203A30]/50'
                       }`}
                     >
-                      {/* Exact Cropped Circular Swatch Image from Catalog Sheet */}
-                      <div className="w-14 h-14 rounded-full shadow-md border-2 border-black/15 relative flex items-center justify-center transition-transform group-hover:scale-110 overflow-hidden bg-gray-100">
+                      {/* Exact Cropped Circular Swatch Image from High-Res Sheet */}
+                      <div className="w-16 h-16 rounded-full shadow-md border-2 border-[#203A30]/20 relative flex items-center justify-center transition-transform group-hover:scale-110 overflow-hidden bg-gray-100">
                         {swatch.swatchImage ? (
                           <img 
                             src={swatch.swatchImage} 
                             alt={swatch.name} 
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-full"
                           />
                         ) : (
-                          <div className="w-full h-full" style={{ backgroundColor: swatch.hex }} />
+                          <div className="w-full h-full rounded-full" style={{ backgroundColor: swatch.hex }} />
                         )}
                         {isSelected && (
-                          <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px] flex items-center justify-center">
+                          <div className="absolute inset-0 bg-black/35 backdrop-blur-[1px] flex items-center justify-center rounded-full">
                             <Check className="w-6 h-6 text-white drop-shadow-lg" />
                           </div>
                         )}
@@ -175,25 +175,27 @@ export default function MaterialStudio() {
                 </p>
               </div>
 
-              {/* Big Circle Preview with Exact Cropped Swatch Image */}
-              <div className="relative rounded-2xl h-48 shadow-lg border border-black/20 p-6 flex flex-col justify-between overflow-hidden bg-[#F4F6F5]">
+              {/* Large Round Circle Preview displaying the exact high-res cropped texture */}
+              <div className="relative rounded-2xl h-52 bg-[#F4F6F5] border border-[#203A30]/15 p-6 flex flex-col items-center justify-between overflow-hidden shadow-inner">
                 {selectedSwatch.swatchImage ? (
-                  <div className="absolute inset-0 flex items-center justify-center p-2">
+                  <div className="w-36 h-36 rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white shrink-0 flex items-center justify-center">
                     <img 
                       src={selectedSwatch.swatchImage} 
                       alt={selectedSwatch.name} 
-                      className="h-full w-auto object-contain rounded-full shadow-md"
+                      className="w-full h-full object-cover rounded-full"
                     />
                   </div>
                 ) : (
-                  <div className="absolute inset-0" style={{ backgroundColor: selectedSwatch.hex }} />
+                  <div className="w-36 h-36 rounded-full shadow-2xl border-4 border-white" style={{ backgroundColor: selectedSwatch.hex }} />
                 )}
 
-                <div className="relative z-10 bg-[#203A30]/90 backdrop-blur-md text-white text-[10px] font-mono px-3 py-1 rounded-md self-start border border-white/20 font-bold">
-                  HEX: {selectedSwatch.hex}
-                </div>
-                <div className="relative z-10 bg-white/95 backdrop-blur-md px-4 py-2 rounded-xl text-[#203A30] border border-white self-end text-xs font-bold shadow-md">
-                  {selectedSwatch.code}
+                <div className="w-full flex items-center justify-between z-10 mt-2">
+                  <div className="bg-[#203A30]/90 backdrop-blur-md text-white text-[10px] font-mono px-3 py-1 rounded-md border border-white/20 font-bold">
+                    HEX: {selectedSwatch.hex}
+                  </div>
+                  <div className="bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-xl text-[#203A30] border border-[#203A30]/20 text-xs font-bold shadow-md">
+                    {selectedSwatch.code}
+                  </div>
                 </div>
               </div>
 
