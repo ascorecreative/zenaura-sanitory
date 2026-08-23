@@ -52,14 +52,14 @@ export default function CollectionMatrix({ onSelectCollection }) {
               key={col.id}
               className="bg-white rounded-2xl overflow-hidden border border-[#203A30]/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group"
             >
-              {/* Image Banner */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#F4F6F5]">
+              {/* Image Banner Container with Uniform Vertical Aspect Ratio */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#FAFAF8] flex items-center justify-center">
                 <img
                   src={col.image}
                   alt={col.name}
-                  className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 z-10">
                   <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.08em] uppercase text-[#203A30] bg-white/95 backdrop-blur-md px-2.5 sm:px-3 py-1 rounded-full border border-[#203A30]/20 shadow-sm">
                     {col.badge}
                   </span>

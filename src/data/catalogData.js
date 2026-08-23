@@ -4,8 +4,8 @@ export const COLLECTIONS_DATA = [
     name: 'Ginza & Ginza Junior',
     tagline: 'The Art of Playful Living & Japanese Boutique Zen',
     category: 'Japandi & Zen',
-    image: '/images/addon/image2.png',
-    secondaryImage: '/images/addon/image1.png',
+    image: '/images/addon/image1.png',
+    secondaryImage: '/images/addon/image2.png',
     features: [
       'Tokyo Ginza architectural innovation',
       'Japanese boutique hotel aesthetic',
@@ -103,7 +103,7 @@ export const CATEGORIES_DATA = [
     title: 'Bathroom',
     subtitle: 'Taps, Basins, Furniture, WC, Bidet & Flushing',
     icon: 'Droplets',
-    image: '/images/addon/image2.png',
+    image: '/images/addon/image1.png',
     items: [
       'Taps (Basin Mixers, Wall Faucets, Bath Fillers)',
       'Basin (Countertop Vessel Bowls, Pedestals, Integrated)',
