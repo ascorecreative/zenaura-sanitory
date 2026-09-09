@@ -217,7 +217,7 @@ export default function MaterialStudio() {
 
               {/* Direct Inquiry CTA */}
               <a
-                href={`https://wa.me/9715414160?text=Hello%20Zenaura%20Sanitary,%20I%20am%20interested%20in%20specifying%20the%20${encodeURIComponent(selectedSwatch.name)}%20(${selectedSwatch.code})%20finish%20for%20my%20project.`}
+                href={`https://wa.me/971541414160?text=Hello%20Zenaura%20Sanitary,%20I%20am%20interested%20in%20specifying%20the%20${encodeURIComponent(selectedSwatch.name)}%20(${selectedSwatch.code})%20finish%20for%20my%20project.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl bg-[#203A30] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#2D4F42] transition-colors duration-300 shadow-md flex items-center justify-center gap-2"

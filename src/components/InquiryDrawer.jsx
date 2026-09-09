@@ -47,7 +47,7 @@ I would like to request an official project consultation & quotation:
 Please reach out with catalog specs and pricing.`;
 
     const encodedMessage = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://wa.me/9715414160?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/971541414160?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -217,7 +217,7 @@ Please reach out with catalog specs and pricing.`;
                   <p className="text-xs text-white/80 font-medium">
                     Reach our technical desk directly at:
                   </p>
-                  <a href="tel:+9715414160" className="block text-sm font-bold text-[#D4AF37] hover:underline">
+                  <a href="tel:+971541414160" className="block text-sm font-bold text-[#D4AF37] hover:underline">
                     +971 54 141 4160
                   </a>
                 </div>
