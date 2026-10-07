@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
 import HeaderNav from './components/HeaderNav';
 import HeroSection from './components/HeroSection';
 import CollectionMatrix from './components/CollectionMatrix';
@@ -14,33 +15,91 @@ import MobileBottomDock from './components/MobileBottomDock';
 import BrandLandingPage from './components/BrandLandingPage';
 import { ALL_BRANDS_DATA } from './data/brandsData';
 
+// Main Homepage Component
+function HomePage({ onRequestCatalogue, onOpenInquiry, onOpenDetailModal, onSelectBrand }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Smooth scroll to section if hash exists
+    if (location.hash) {
+      const elem = document.querySelector(location.hash);
+      if (elem) {
+        setTimeout(() => {
+          elem.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
+  return (
+    <main>
+      <HeroSection 
+        onRequestCatalogue={onRequestCatalogue}
+        onOpenInquiry={onOpenInquiry}
+      />
+
+      <CollectionMatrix 
+        onSelectCollection={onOpenDetailModal}
+      />
+
+      <CategoryGrid 
+        onSelectCategory={onOpenDetailModal}
+      />
+
+      <BrandsShowcase 
+        onOpenInquiry={onOpenInquiry}
+        onSelectBrand={onSelectBrand}
+      />
+
+      <MaterialStudio />
+
+      <ShowroomContact />
+    </main>
+  );
+}
+
+// Dedicated Brand Route Wrapper Component
+function BrandRouteWrapper({ onOpenInquiry }) {
+  const { brandId } = useParams();
+  const navigate = useNavigate();
+  const brand = ALL_BRANDS_DATA.find(b => b.id === brandId);
+
+  if (!brand) {
+    return (
+      <div className="min-h-[60vh] pt-36 px-4 text-center space-y-4">
+        <h2 className="font-serif text-3xl font-bold text-[#203A30]">Brand Not Found</h2>
+        <p className="text-sm text-[#2D3748]">The requested brand parameter "{brandId}" does not exist in our directory.</p>
+        <button
+          onClick={() => navigate('/#brands')}
+          className="px-6 py-2.5 rounded-full bg-[#203A30] text-white text-xs font-bold uppercase tracking-wider"
+        >
+          Return to Brands Showcase
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <main>
+      <BrandLandingPage
+        brand={brand}
+        onBack={() => navigate('/#brands')}
+        onSelectBrand={(b) => navigate(`/brands/${b.id}`)}
+        onOpenInquiry={() => onOpenInquiry(brand)}
+      />
+    </main>
+  );
+}
+
 export default function App() {
   const [catalogueModalOpen, setCatalogueModalOpen] = useState(false);
   const [inquiryDrawerOpen, setInquiryDrawerOpen] = useState(false);
   const [selectedItemForModal, setSelectedItemForModal] = useState(null);
   const [inquiryInitialData, setInquiryInitialData] = useState(null);
-  const [activeBrand, setActiveBrand] = useState(null);
 
-  // Listen to hash changes for deep linking (e.g. #brand-grohe)
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#brand-')) {
-        const brandId = hash.replace('#brand-', '');
-        const foundBrand = ALL_BRANDS_DATA.find(b => b.id === brandId);
-        if (foundBrand) {
-          setActiveBrand(foundBrand);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      } else if (hash === '#brands' || hash === '' || hash === '#hero') {
-        setActiveBrand(null);
-      }
-    };
-
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  const navigate = useNavigate();
 
   const handleOpenCatalogueModal = () => {
     setCatalogueModalOpen(true);
@@ -56,14 +115,7 @@ export default function App() {
   };
 
   const handleSelectBrand = (brand) => {
-    setActiveBrand(brand);
-    window.location.hash = `#brand-${brand.id}`;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleBackToMain = () => {
-    setActiveBrand(null);
-    window.location.hash = '#brands';
+    navigate(`/brands/${brand.id}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -76,47 +128,46 @@ export default function App() {
         onOpenInquiry={() => handleOpenInquiryDrawer()} 
       />
 
-      {/* Conditional View: Dedicated Brand Landing Page vs Main Homepage */}
-      {activeBrand ? (
-        <main>
-          <BrandLandingPage
-            brand={activeBrand}
-            onBack={handleBackToMain}
-            onSelectBrand={handleSelectBrand}
-            onOpenInquiry={() => handleOpenInquiryDrawer(activeBrand)}
-          />
-        </main>
-      ) : (
-        <main>
-          <HeroSection 
-            onRequestCatalogue={handleOpenCatalogueModal}
-            onOpenInquiry={() => handleOpenInquiryDrawer()}
-          />
+      {/* Routes for Homepage & Dedicated Brand Pages */}
+      <Routes>
+        <Route 
+          path="/" 
+          element={
+            <HomePage 
+              onRequestCatalogue={handleOpenCatalogueModal}
+              onOpenInquiry={() => handleOpenInquiryDrawer()}
+              onOpenDetailModal={handleOpenDetailModal}
+              onSelectBrand={handleSelectBrand}
+            />
+          } 
+        />
+        <Route 
+          path="/brands" 
+          element={
+            <HomePage 
+              onRequestCatalogue={handleOpenCatalogueModal}
+              onOpenInquiry={() => handleOpenInquiryDrawer()}
+              onOpenDetailModal={handleOpenDetailModal}
+              onSelectBrand={handleSelectBrand}
+            />
+          } 
+        />
+        <Route 
+          path="/brands/:brandId" 
+          element={
+            <BrandRouteWrapper 
+              onOpenInquiry={handleOpenInquiryDrawer}
+            />
+          } 
+        />
+      </Routes>
 
-          <CollectionMatrix 
-            onSelectCollection={(col) => handleOpenDetailModal(col)}
-          />
-
-          <CategoryGrid 
-            onSelectCategory={(cat) => handleOpenDetailModal(cat)}
-          />
-
-          <BrandsShowcase 
-            onOpenInquiry={() => handleOpenInquiryDrawer()}
-            onSelectBrand={handleSelectBrand}
-          />
-
-          <MaterialStudio />
-
-          <InquiryDrawer 
-            isOpen={inquiryDrawerOpen}
-            onClose={() => setInquiryDrawerOpen(false)}
-            initialData={inquiryInitialData}
-          />
-
-          <ShowroomContact />
-        </main>
-      )}
+      {/* Inquiry Drawer */}
+      <InquiryDrawer 
+        isOpen={inquiryDrawerOpen}
+        onClose={() => setInquiryDrawerOpen(false)}
+        initialData={inquiryInitialData}
+      />
 
       {/* Footer */}
       <Footer />

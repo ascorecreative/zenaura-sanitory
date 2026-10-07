@@ -23,6 +23,35 @@ export default function BrandLandingPage({ brand, onBack, onSelectBrand, onOpenI
     const originalTitle = document.title;
     document.title = brand.seoTitle || `${brand.name} UAE | Authorized Supplier | Zenaura Sanitary`;
 
+    const brandUrl = `https://www.zenaurasanitary.ae/brands/${brand.id}`;
+
+    // Canonical link
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = brandUrl;
+
+    // Meta Description
+    let metaDesc = document.querySelector("meta[name='description']");
+    if (metaDesc && brand.seoDescription) {
+      metaDesc.content = brand.seoDescription;
+    }
+
+    // Meta Keywords
+    let metaKw = document.querySelector("meta[name='keywords']");
+    if (metaKw && brand.seoKeywords) {
+      metaKw.content = brand.seoKeywords;
+    }
+
+    // OpenGraph URL
+    let ogUrl = document.querySelector("meta[property='og:url']");
+    if (ogUrl) {
+      ogUrl.content = brandUrl;
+    }
+
     // Inject JSON-LD Schema.org for Brand
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -33,8 +62,8 @@ export default function BrandLandingPage({ brand, onBack, onSelectBrand, onOpenI
       "name": brand.name,
       "description": brand.description,
       "logo": brand.logoImage ? `https://www.zenaurasanitary.ae${brand.logoImage}` : undefined,
-      "url": window.location.href,
-      "mainEntityOfPage": window.location.href,
+      "url": brandUrl,
+      "mainEntityOfPage": brandUrl,
       "seller": {
         "@type": "LocalBusiness",
         "name": "Zenaura Sanitary Ware & Architectural Solutions",
