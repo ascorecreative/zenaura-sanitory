@@ -26,7 +26,7 @@ export default function Footer() {
             </a>
 
             <p className="text-xs text-white/80 leading-relaxed max-w-sm font-medium">
-              Official supplier and project partner for GROHE, GEBERIT, JAGUAR, RAK CERAMICS, BAGNODESIGN and SANIPEX GROUP portfolios. Delivering luxury mixers, shower systems, custom vanities, and architectural porcelain slabs across the UAE & GCC.
+              Official supplier and authorized partner for 63 world-leading architectural brands including GROHE, GEBERIT, JAGUAR, RAK CERAMICS, BAGNODESIGN, SANIPEX GROUP, DORNBRACHT, VOLA & HEWI. Delivering luxury mixers, shower systems, custom vanities, and architectural porcelain slabs across the UAE & GCC.
             </p>
 
             {/* Certifications Row */}
